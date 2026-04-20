@@ -1,0 +1,74 @@
+Example National Bank 
+
+From: Pat Medown, Chief Loan Officer 
+To: All loan officers 
+
+Date: 1 Oct 2025 
+
+Everyone, 
+It has come to my attention recently that there has been some confusion about the criteria that 
+we use in evaluating applicants for new loans. This has caused some inconsistencies with our 
+loan approvals, and have caused some significant negative feelings. To address this, I wanted 
+to clarify things, while still giving you loan officers the flexibility to evaluate specific cases as 
+needed. 
+
+There are different criteria for both the debt:equity ratio and for the “personal evaluation” criteria 
+that is in the customer’s file. In general, this criteria varies by loan type, however in some cases 
+it also varies by the amount requested. See below. 
+
+To clarify some terms, since some of you seem to have forgotten: 
+    •  “Debt to Equity Ratio” determines the most debt they may have with us (including 
+existing and new loans) based on how much they have on deposit with us. You can 
+determine the minimum equity by taking the total debt and dividing it by this number. 
+    •  “Customer rating” is a simplified rating that is based on the latest summary written by a 
+loan officer that is in the client’s file. This will evaluate their entire loan history with the 
+bank, not just current loans. While the officer does not need to specify this rating 
+precisely, you can keep these descriptions in mind, going from best to worst: 
+        ◦  Excellent: The client has a perfect record with us, with several loans whose 
+payments were never late. This should be reserved only for our best clients. 
+        ◦  Great: The client has had several loans with us with only infrequent late 
+payments. 
+        ◦  Good: The client either has only a few loans with us that have never been late, or 
+several loans with occasional late payments. 
+        ◦  Fair: The client has a few loans with us that are sometimes late. 
+        ◦  Poor: The client has no loans with us or loans that are frequently late. 
+Auto Loans under $10,000 
+    •  Debt to Equity Ratio: 5 
+    •  Customer Rating: Fair or better 
+
+Auto Loans $10,000 and up 
+    •  Debt to Equity Ratio: 7 
+    •  Customer Rating: Good or better 
+
+Recreational Vehicles (including motorcycles, boats, campers, and similar equipment) 
+    •  Debt to Equity Ratio: 6 
+    •  Customer Rating: Good or better 
+
+Home Improvement under $20,000 
+    •  Debt to Equity Ratio: 4 
+    •  Customer Rating: Fair or better 
+
+Home Improvement $20,000 and up 
+    •  Debt to Equity Ratio: 6 
+    •  Customer Rating: Fair or better 
+
+Personal Loans under $100 
+    •  Debt to Equity Ratio: 1000 
+    •  Customer Rating: Poor or better 
+
+Personal Loans $100 up to $500 
+    •  Debt to Equity Ratio: 500 
+    •  Customer Rating: Fair or better 
+
+Personal Loans $500 up to $5000 
+    •  Debt to Equity Ratio: 200 
+    •  Customer Rating: Good or better 
+
+Personal Loans $5000 and up 
+    •  Debt to Equity Ratio: 100 
+    •  Customer Rating: Great or better 
+
+If there are any questions, please feel free to contact my office.
+ 
+Sincerely, 
+P. Medown

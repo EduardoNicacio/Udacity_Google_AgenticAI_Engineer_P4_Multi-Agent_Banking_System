@@ -24,24 +24,22 @@ with open(instruction_file_path, "r") as f:
 toolbox_url = os.getenv("TOOLBOX_URL", "http://127.0.0.1:5000")
 db_client = ToolboxSyncClient(toolbox_url)
 
+# 6. Load deposit-specific tools
 get_accounts_tool = db_client.load_tool("get_accounts")
 get_balance_tool = db_client.load_tool("get_balance")
 get_transactions_tool = db_client.load_tool("get_transactions")
 check_minimum_balance_tool = db_client.load_tool("check_minimum_balance")
 
-# 6. Add the tools to the toolset
-tools = [
-    get_accounts_tool,
-    get_balance_tool,
-    get_transactions_tool,
-    check_minimum_balance_tool,
-]
-
-# 7. Create the Agent
+# 7. Create agent with all required tools
 root_agent = Agent(
     name="deposit_agent",
     description="Agent that handles deposit accounts.",
     instruction=instruction,
     model=model,
-    tools=tools,  # type: ignore
+    tools=[
+        get_accounts_tool,
+        get_balance_tool,
+        get_transactions_tool,
+        check_minimum_balance_tool
+    ]
 )

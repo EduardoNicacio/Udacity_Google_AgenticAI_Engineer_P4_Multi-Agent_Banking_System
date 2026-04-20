@@ -9,5 +9,20 @@
     "streaming": false,
     "functions": true
   },
-  "skills": []
+  "skills": [
+    {
+      "name": "deposit_account_balance",
+      "description": "Retrieve balance information for specific deposit accounts"
+    },
+    {
+      "name": "account_transactions",
+      "description": "View transaction history for deposit accounts"
+    },
+    {
+      "name": "minimum_balance_check",
+      "description": "Verify if total deposits meet minimum requirements"
+    }
+  ],
+  "url": "http://localhost:8000/a2a/deposit",
+  "version": "1.0.0"
 }

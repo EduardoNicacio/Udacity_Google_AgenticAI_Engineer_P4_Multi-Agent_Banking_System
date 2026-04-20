@@ -153,7 +153,7 @@ def handle_infile(infile, handles):
                     fh.write("=" * 40 + "\n\n")
                     last_thread_key = current_thread_key
                 else:
-                    fh.write("-" * 5 + "\n\n")
+                    fh.write("-" * 5 + "\n\n") # type: ignore
 
             handle_prompt_request(url, prompt, task or None, context or None, message or None, handles)
     if input_stream is not sys.stdin:

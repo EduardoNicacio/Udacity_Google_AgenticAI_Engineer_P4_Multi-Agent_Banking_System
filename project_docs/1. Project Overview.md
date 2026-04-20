@@ -57,6 +57,6 @@ The three main agents you will build are:
 ### The Manager
 
 - Can answer questions about the bank.
-- Can answer questions from the Loan Agent or the Deposit Account Agent without having the customer “transfer to” those agents. This will involve A2A.
+- Can answer questions from the Loan Agent or the Deposit Account Agent without having the customer "transfer to" those agents. This will involve A2A.
 
 All three agents must listen via A2A and be able to present an A2A Agent Card representing itself.

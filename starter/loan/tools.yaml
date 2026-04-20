@@ -6,6 +6,31 @@ sources:
     database: bank
     user: ${MYSQL_USER}
     password: ${MYSQL_PASSWORD}
-
 tools:
-  # TODO
+  get_loan_balance:
+    kind: mysql-sql
+    source: loan
+    description: Get the outstanding balance for a specific loan.
+    parameters:
+      - name: loan_id
+        type: string
+        description: The ID of the loan.
+    statement: SELECT outstanding_balance FROM loans WHERE loan_id = ?
+  get_loan_details:
+    kind: mysql-sql
+    source: loan
+    description: Get the terms and details of a specific loan.
+    parameters:
+      - name: loan_id
+        type: string
+        description: The ID of the loan.
+    statement: SELECT * FROM loans WHERE loan_id = ?
+  get_next_payment_date:
+    kind: mysql-sql
+    source: loan
+    description: Get the next payment date for a specific loan.
+    parameters:
+      - name: loan_id
+        type: string
+        description: The ID of the loan.
+    statement: SELECT next_payment_date FROM loans WHERE loan_id = ?

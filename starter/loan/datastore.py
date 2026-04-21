@@ -146,7 +146,7 @@ def search(
 
 def datastore_search_tool(search_query: str) -> list[str]:
     """
-    Search the Vertex AI Search Datastore for information about Betty's Bird Boutique.
+    Search the Vertex AI Search Datastore for information about the National Bank.
 
     Args:
         search_query (str): The search query to look up in documents
@@ -154,9 +154,9 @@ def datastore_search_tool(search_query: str) -> list[str]:
     Returns:
         list[str]: List of document snippets relevant to the query
     """
-    project_id = os.environ.get("DATASTORE_PROJECT_ID", "")
-    engine_id = os.environ.get("DATASTORE_ENGINE_ID", "")
-    location = os.environ.get("DATASTORE_LOCATION", "global")
+    project_id = os.getenv("DATASTORE_PROJECT_ID", "")
+    engine_id = os.getenv("DATASTORE_ENGINE_ID", "")
+    location = os.getenv("DATASTORE_LOCATION", "global")
 
     try:
         return search(project_id, location, engine_id, search_query)

@@ -1,13 +1,30 @@
 {
-  "defaultInputModes": [
-    "text/plain"
-  ],
-  "defaultOutputModes": [
-    "text/plain"
-  ],
+  "name": "loan-agent",
+  "version": "1.0.0",
+  "description": "Orchestrates loan application and approval workflow for National Bank",
+  "url": "http://localhost:8000/a2a/loan",
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
   "capabilities": {
     "streaming": false,
-    "functions": true
+    "pushNotifications": false,
+    "stateTransitionHistory": false
   },
-  "skills": []
+  "skills": [
+    {
+      "id": "loan_application_processing",
+      "name": "Loan application processing",
+      "description": "Accepts a loan request and runs the full approval workflow including policy checks, equity verification, and final decision"
+    },
+    {
+      "id": "policy_evaluation",
+      "name": "Policy evaluation",
+      "description": "Evaluates loan requests against National Bank lending policy criteria"
+    },
+    {
+      "id": "customer_profile_analysis",
+      "name": "Customer profile analysis",
+      "description": "Analyses customer credit rating and financial history for loan eligibility"
+    }
+  ]
 }

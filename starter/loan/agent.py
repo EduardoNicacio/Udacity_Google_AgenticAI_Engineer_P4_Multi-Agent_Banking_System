@@ -1,9 +1,9 @@
 import os
 from dotenv import load_dotenv
 from google.adk.agents import Agent
+from google.adk.agents.remote_a2a_agent import RemoteA2aAgent, AGENT_CARD_WELL_KNOWN_PATH
 from google.adk.sessions import InMemorySessionService
 from toolbox_core import ToolboxSyncClient
-from .loan import loan_approval_workflow
 
 # 1. Load the environment variables from .env
 load_dotenv()
@@ -25,24 +25,27 @@ with open(instruction_file_path, "r") as f:
 toolbox_url = os.getenv("TOOLBOX_URL", "http://127.0.0.1:5000")
 db_client = ToolboxSyncClient(toolbox_url)
 
-get_loan_balance_tool = db_client.load_tool("get_loan_balance")
-get_loan_details_tool = db_client.load_tool("get_loan_details")
-get_next_payment_date_tool = db_client.load_tool("get_next_payment_date")
+# 6. Load the necessary Agents
+# 6.a. Deposit Agent
+deposit_agent = RemoteA2aAgent(
+    name="deposit",
+    agent_card="http://localhost:8000/a2a/deposit/.well-known/a2a-agent-card.json"
+)
 
-# 6. Set up the tools that we will be using for the root agent
-tools = [
-    get_loan_balance_tool,
-    get_loan_details_tool,
-    get_next_payment_date_tool,
-]
+# 6.b. Loan Agent
+loan_agent = RemoteA2aAgent(
+    name="loan", 
+    agent_card="http://localhost:8000/a2a/loan/.well-known/a2a-agent-card.json"
+)
 
-# 7. Define the sub-agents - defined within root_agent
-
-# 8. Create the agent
+# 7. Create the agent with sub-agent and all the required tools
 root_agent = Agent(
     name="loan_agent",
     description="Agent that handles loan applications.",
     instruction=instruction,
-    sub_agents=[loan_approval_workflow],
-    tools=tools,  # type: ignore
+    sub_agents=[
+        deposit_agent, 
+        loan_agent,
+    ],
+    model=model,
 )

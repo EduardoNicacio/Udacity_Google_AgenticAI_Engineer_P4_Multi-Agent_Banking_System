@@ -87,7 +87,7 @@ def process_response(response, handles, request_payload=None):
             output_txt(response, fh, request_payload)
 
 def handle_card_request(url, handles):
-    card_suffix = ".well-known/agent-card.json"
+    card_suffix = ".well-known/a2a-agent-card.json"
     if not url.endswith(card_suffix):
         if not url.endswith("/"):
             url += "/"

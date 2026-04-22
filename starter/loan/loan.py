@@ -51,7 +51,7 @@ get_loan_balance_tool = db_client.load_tool("get_loan_balance")
 # 7. Connect to Deposit Agent via A2A
 deposit_agent = RemoteA2aAgent(
     name="deposit",
-    agent_card=f"http://localhost:8000/a2a/deposit{AGENT_CARD_WELL_KNOWN_PATH}",
+    agent_card=f"http://localhost:8001/a2a/deposit{AGENT_CARD_WELL_KNOWN_PATH}",
 )
 
 # 8. Create agent that gets the requested loan value (stage 4)
@@ -158,7 +158,9 @@ class TotalValueAgent(BaseAgent):
                 else:
                     outstanding_raw = parsed
             except ValueError:
-                outstanding_raw = outstanding_raw.replace("$", "").replace(",", "").strip()
+                outstanding_raw = (
+                    outstanding_raw.replace("$", "").replace(",", "").strip()
+                )
 
         outstanding_balance = float(outstanding_raw)
 
@@ -244,7 +246,6 @@ class TotalValueAgent(BaseAgent):
 
 # Instantiate the TotalValueAgent with policy-aware logic
 total_value_agent = TotalValueAgent(name="total_value_agent")
-
 
 # 14. Create agent that checks user's equity (stage 4)
 check_equity_agent = LlmAgent(

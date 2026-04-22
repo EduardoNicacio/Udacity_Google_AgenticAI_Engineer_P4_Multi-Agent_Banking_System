@@ -51,3 +51,6 @@ temp/
 # Generated reports
 reports/
 output/
+
+# Google ADK
+.adk/

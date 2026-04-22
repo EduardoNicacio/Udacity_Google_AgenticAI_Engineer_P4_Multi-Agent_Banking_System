@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from google.adk import Runner
 from google.adk.agents import Agent
 from google.adk.sessions import InMemorySessionService
 from toolbox_core import ToolboxSyncClient
@@ -42,4 +43,11 @@ root_agent = Agent(
         get_transactions_tool,
         check_minimum_balance_tool
     ]
+)
+
+# 8. Defines the ADK Runner for the root_agent
+runner = Runner(
+    agent=root_agent,
+    session_service=session_service,
+    app_name="national_bank_deposit_agent",
 )

@@ -15,7 +15,7 @@ tools:
       - name: loan_id
         type: string
         description: The ID of the loan.
-    statement: SELECT outstanding_balance FROM loans WHERE loan_id = ?
+    statement: SELECT outstanding_balance FROM loans WHERE id = ?
   get_loan_details:
     kind: mysql-sql
     source: loan
@@ -24,7 +24,7 @@ tools:
       - name: loan_id
         type: string
         description: The ID of the loan.
-    statement: SELECT * FROM loans WHERE loan_id = ?
+    statement: SELECT id, customer_id, loan_type, origination_date, amount, outstanding_balance, terms, monthly_payment, next_payment_date FROM loans WHERE id = ?
   get_next_payment_date:
     kind: mysql-sql
     source: loan
@@ -33,4 +33,4 @@ tools:
       - name: loan_id
         type: string
         description: The ID of the loan.
-    statement: SELECT next_payment_date FROM loans WHERE loan_id = ?
+    statement: SELECT next_payment_date FROM loans WHERE id = ?

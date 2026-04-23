@@ -18,6 +18,7 @@ from google.adk.agents.remote_a2a_agent import (
 from google.adk.events import Event, EventActions
 from google.adk.sessions import InMemorySessionService
 
+from pydantic import BaseModel, Field
 from toolbox_core import ToolboxSyncClient
 
 from .datastore import datastore_search_tool
@@ -31,7 +32,6 @@ model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
 # 3. Configure short-term session to use the in-memory service
 session_service = InMemorySessionService()
-
 
 # 4. Read the instructions from a file in the same directory as this agent.py file.
 def load_instructions(prompt_file: str):
@@ -51,45 +51,91 @@ get_loan_balance_tool = db_client.load_tool("get_loan_balance")
 # 7. Connect to Deposit Agent via A2A
 deposit_agent = RemoteA2aAgent(
     name="deposit",
-    agent_card=f"http://localhost:8001/a2a/deposit{AGENT_CARD_WELL_KNOWN_PATH}",
+    agent_card=f"http://localhost:8000/a2a/deposit{AGENT_CARD_WELL_KNOWN_PATH}",
 )
 
 # 8. Create agent that gets the requested loan value (stage 4)
+class LoanRequestDetails(BaseModel):
+    """Schema for loan request details"""
+    loan_type: str = Field(..., description="Type of loan requested (auto/personal/home/improvement/recreational)")
+    loan_amount: float | None = Field(None, description="Amount requested in USD")
+    currency: str = "USD"
+
 get_requested_value_agent = LlmAgent(
     name="get_requested_value_agent",
     description="Agent that gets the requested loan value",
     instruction=load_instructions("loan-request-prompt.txt"),
+    output_schema=LoanRequestDetails,
     output_key="loan_request_details",
     model=model,
 )
 
 # 10. Define individual agents for parallel calling
 # 10.a. Oustanding Balance Agent
+class OutstandingBalance(BaseModel):
+    """Schema for outstanding balance"""
+    outstanding_balance: float = Field(..., description="Total outstanding loan balance in USD")
+    currency: str = "USD"
+
 outstanding_balance_agent = LlmAgent(
     name="outstanding_balance_agent",
     description="Agent that checks for outstanding balances during the Loan workflow",
     instruction=load_instructions("outstanding-balance-prompt.txt"),
     tools=[get_loan_balance_tool],
+    output_schema=OutstandingBalance,
     output_key="outstanding_balance",
     model=model,
 )
 
 # 10.b. Loan Policy Agent
+class DebtToEquityRatios(BaseModel):
+    """Schema for debt-to-equity ratios"""
+    auto_loans_under_10k: float = Field(..., description="DE ratio for auto loans under $10k")
+    auto_loans_10k_plus: float = Field(..., description="DE ratio for auto loans $10k+")
+    recreational_vehicles: float = Field(..., description="DE ratio for recreational vehicles")
+    home_improvement_under_20k: float = Field(..., description="DE ratio for home improvement under $20k")
+    home_improvement_20k_plus: float = Field(..., description="DE ratio for home improvement $20k+")
+
+class CustomerRatingRequirements(BaseModel):
+    """Schema for customer rating requirements"""
+    auto_loans_under_10k: list[str] = Field(..., description="Acceptable ratings for auto loans under $10k")
+    auto_loans_10k_plus: list[str] = Field(..., description="Acceptable ratings for auto loans $10k+")
+    recreational_vehicles: list[str] = Field(..., description="Acceptable ratings for recreational vehicles")
+    home_improvement_under_20k: list[str] = Field(..., description="Acceptable ratings for home improvement under $20k")
+    home_improvement_20k_plus: list[str] = Field(..., description="Acceptable ratings for home improvement $20k+")
+
+class PolicyCriteria(BaseModel):
+    """Schema for policy criteria"""
+    debt_to_equity_ratios: DebtToEquityRatios = Field(..., description="Debt-to-equity ratios by loan type")
+    customer_rating_requirements: CustomerRatingRequirements = Field(..., description="Acceptable credit ratings by loan type")
+    policy_document_loaded: bool = True
+    source_uri: str = ""
+
 policy_agent = LlmAgent(
     name="policy_agent",
     description="Agent that checks the loan policy documents for this type of loan",
     instruction=load_instructions("policy-agent-prompt.txt"),
     tools=[datastore_search_tool],
+    output_schema=PolicyCriteria,
     output_key="policy_criteria",
     model=model,
 )
 
 # 10.c. User Profile Agent
+class CustomerProfile(BaseModel):
+    """Schema for customer profile"""
+    customer_id: str | None = Field(None, description="Customer ID from document")
+    credit_rating: str | None = Field(None, description="Credit rating (Poor/Fair/Good/Great/Excellent)")
+    financial_history_summary: str | None = Field(None, description="Summary of financial history")
+    profile_loaded: bool = True
+    other_profile_data: dict[str, any] = {} # type: ignore
+
 user_profile_agent = LlmAgent(
     name="user_profile_agent",
     description="Agent that analyzes the user profile when a Loan request is submitted",
     instruction=load_instructions("user-profile-base-prompt.txt"),
     tools=[datastore_search_tool],
+    output_schema=CustomerProfile,
     output_key="customer_profile",
     model=model,
 )
@@ -102,6 +148,13 @@ info_gathering_agent = ParallelAgent(
 
 
 # 12. Custom Agent for calculation (computes minimum required equity)
+class TotalValueState(BaseModel):
+    """Schema for total value agent state"""
+    minimum_deposits_required: float = Field(..., description="Minimum deposit balance required")
+    customer_rating_requirements: dict[str, list[str]] = Field(..., description="Rating requirements by loan type")
+    de_ratio_used: float = Field(..., description="Debt-to-equity ratio used in calculation")
+    total_debt: float = Field(..., description="Total debt if loan is approved")
+
 class TotalValueAgent(BaseAgent):
     """
     Calculates the minimum required deposit balance based on loan amount,
@@ -248,20 +301,31 @@ class TotalValueAgent(BaseAgent):
 total_value_agent = TotalValueAgent(name="total_value_agent")
 
 # 14. Create agent that checks user's equity (stage 4)
+class EquityCheckResult(BaseModel):
+    """Schema for equity check result"""
+    meets_requirement: bool = Field(..., description="Whether deposits meet minimum requirement")
+
 check_equity_agent = LlmAgent(
     name="check_equity_agent",
     description="Agent that checks the user's equity",
     instruction=load_instructions("check-equity-prompt.txt"),
     sub_agents=[deposit_agent],
+    output_schema=EquityCheckResult,
     output_key="equity_check_result",
     model=model,
 )
 
 # 15. Final decision Agent (as per rubric -> safe responses)
+class FinalDecision(BaseModel):
+    """Schema for final decision"""
+    approved: bool = Field(..., description="Whether loan is approved")
+    reason_summary: str | None = Field(None, description="Brief summary of decision factors")
+
 final_decision_agent = LlmAgent(
     name="final_decision_agent",
     description="The Final decision Agent",
     instruction=load_instructions("approval-report-prompt.txt"),
+    output_schema=FinalDecision,
     output_key="final_decision_result",
     model=model,
 )

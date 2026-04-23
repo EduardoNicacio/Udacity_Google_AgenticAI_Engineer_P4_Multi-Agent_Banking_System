@@ -10,27 +10,27 @@ tools:
   get_loan_balance:
     kind: mysql-sql
     source: loan
-    description: Get the outstanding balance for a specific loan.
+    description: Get the outstanding balance for a specific Customer.
     parameters:
-      - name: loan_id
+      - name: customer_id
         type: string
-        description: The ID of the loan.
-    statement: SELECT outstanding_balance FROM loans WHERE id = ?
+        description: The ID of the Customer.
+    statement: SELECT outstanding_balance FROM loans WHERE customer_id = ?
   get_loan_details:
     kind: mysql-sql
     source: loan
-    description: Get the terms and details of a specific loan.
+    description: Get the terms and details of a specific Loan.
     parameters:
       - name: loan_id
         type: string
-        description: The ID of the loan.
+        description: The ID of the Loan.
     statement: SELECT id, customer_id, loan_type, origination_date, amount, outstanding_balance, terms, monthly_payment, next_payment_date FROM loans WHERE id = ?
   get_next_payment_date:
     kind: mysql-sql
     source: loan
-    description: Get the next payment date for a specific loan.
+    description: Get the next payment date for a specific Loan.
     parameters:
       - name: loan_id
         type: string
-        description: The ID of the loan.
+        description: The ID of the Loan.
     statement: SELECT next_payment_date FROM loans WHERE id = ?

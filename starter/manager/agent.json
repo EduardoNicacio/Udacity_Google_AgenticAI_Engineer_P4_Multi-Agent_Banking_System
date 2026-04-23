@@ -1,13 +1,25 @@
-  {
-    "defaultInputModes": [
-      "text/plain"
-    ],
-    "defaultOutputModes": [
-      "text/plain"
-    ],
-    "capabilities": {
-      "streaming": false,
-      "functions": true
+{
+  "name": "manager-agent",
+  "version": "1.0.0",
+  "description": "Central hub for National Bank operations, coordinating Deposit and Loan workflows.",
+  "url": "http://localhost:8000/a2a/manager",
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain"],
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "skills": [
+    {
+      "id": "banking_routing",
+      "name": "Banking Routing",
+      "description": "Directs users to the appropriate banking agent based on query intent"
     },
-    "skills": []
-  }
+    {
+      "id": "data_aggregation",
+      "name": "Data Aggregation",
+      "description": "Retrieves combined account and loan data for financial planning"
+    }
+  ]
+}

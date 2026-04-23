@@ -8,7 +8,7 @@
   "capabilities": {
     "streaming": false,
     "pushNotifications": false,
-    "stateTransitionHistory": false
+    "stateTransitionHistory": true
   },
   "skills": [
     {

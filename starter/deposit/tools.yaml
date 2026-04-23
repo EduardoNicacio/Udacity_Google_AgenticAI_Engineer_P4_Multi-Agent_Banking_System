@@ -10,8 +10,12 @@ tools:
   get_accounts:
     kind: mysql-sql
     source: deposit
-    description: Get a list of all deposit accounts for the user.
-    statement: SELECT * FROM accounts;
+    description: Get a list of all deposit accounts for the Customer.
+    parameters:
+      - name: customer_id
+        type: string
+        description: The ID of the Customer.
+    statement: SELECT * FROM accounts WHERE customer_id = ?
   get_balance:
     kind: mysql-sql
     source: deposit
@@ -19,7 +23,7 @@ tools:
     parameters:
       - name: id
         type: string
-        description: The ID of the account.
+        description: The ID of the Account.
     statement: SELECT balance FROM accounts WHERE id = ?
   get_transactions:
     kind: mysql-sql
@@ -28,7 +32,7 @@ tools:
     parameters:
       - name: account_id
         type: string
-        description: The ID of the account.
+        description: The ID of the Account.
     statement: SELECT * FROM transactions WHERE account_id = ?
   check_minimum_balance:
     kind: mysql-sql
@@ -38,4 +42,7 @@ tools:
       - name: target_amount
         type: string
         description: The target amount to check against.
-    statement: SELECT (SUM(balance) > ?) AS has_minimum_balance FROM accounts
+      - name: customer_id
+        type: string
+        description: The ID of the Customer.
+    statement: SELECT (SUM(balance) > ?) AS has_minimum_balance FROM accounts WHERE customer_id = ?

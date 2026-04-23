@@ -42,7 +42,7 @@ get_next_payment_date_tool = db_client.load_tool("get_next_payment_date")
 # 7. Loads the Deposit Agent via A2A
 deposit_agent = RemoteA2aAgent(
     name="deposit",
-    agent_card="http://localhost:8001/a2a/deposit/.well-known/agent-card.json"
+    agent_card="http://localhost:8000/a2a/deposit/.well-known/agent-card.json"
 )
 
 # 8. Loads the Loan Agent via A2A

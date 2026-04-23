@@ -26,6 +26,11 @@ with open(instruction_file_path, "r") as f:
 toolbox_url = os.getenv("TOOLBOX_URL", "http://127.0.0.1:5000")
 db_client = ToolboxSyncClient(toolbox_url)
 
+# 5.a Loan tools
+get_loan_balance_tool = db_client.load_tool("get_loan_balance")
+get_loan_details_tool = db_client.load_tool("get_loan_details")
+get_next_payment_date_tool = db_client.load_tool("get_next_payment_date")
+
 # 6. Load the necessary sub-agents
 loan_workflow = loan_approval_workflow
 
@@ -36,6 +41,11 @@ root_agent = Agent(
     instruction=instruction,
     sub_agents=[
         loan_workflow
+    ],
+    tools = [
+        get_loan_balance_tool,
+        get_loan_details_tool,
+        get_next_payment_date_tool,
     ],
     model=model,
 )

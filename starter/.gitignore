@@ -54,3 +54,4 @@ output/
 
 # Google ADK
 .adk/
+*/.adk/

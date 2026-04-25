@@ -2,7 +2,7 @@
   "name": "manager-agent",
   "version": "1.0.0",
   "description": "Central hub for National Bank operations, coordinating Deposit and Loan workflows.",
-  "url": "http://localhost:8000/a2a/manager",
+  "url": "http://127.0.0.1:8000/a2a/manager",
   "defaultInputModes": ["text/plain"],
   "defaultOutputModes": ["text/plain"],
   "capabilities": {
@@ -14,12 +14,14 @@
     {
       "id": "banking_routing",
       "name": "Banking Routing",
-      "description": "Directs users to the appropriate banking agent based on query intent"
+      "description": "Directs users to the appropriate banking agent based on query intent",
+      "tags": ["banking", "routing"]
     },
     {
       "id": "data_aggregation",
       "name": "Data Aggregation",
-      "description": "Retrieves combined account and loan data for financial planning"
+      "description": "Retrieves combined account and loan data for financial planning",
+      "tags": ["banking", "data", "aggregation"]
     }
   ]
 }

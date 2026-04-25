@@ -2,7 +2,7 @@
   "name": "loan-agent",
   "version": "1.0.0",
   "description": "Orchestrates loan application and approval workflow for National Bank",
-  "url": "http://localhost:8000/a2a/loan",
+  "url": "http://127.0.0.1:8000/a2a/loan",
   "defaultInputModes": ["text/plain"],
   "defaultOutputModes": ["text/plain"],
   "capabilities": {
@@ -14,17 +14,20 @@
     {
       "id": "loan_application_processing",
       "name": "Loan application processing",
-      "description": "Accepts a loan request and runs the full approval workflow including policy checks, equity verification, and final decision"
+      "description": "Accepts a loan request and runs the full approval workflow including policy checks, equity verification, and final decision",
+      "tags": ["loan", "application"]
     },
     {
       "id": "policy_evaluation",
       "name": "Policy evaluation",
-      "description": "Evaluates loan requests against National Bank lending policy criteria"
+      "description": "Evaluates loan requests against National Bank lending policy criteria",
+      "tags": ["loan", "policy"]
     },
     {
       "id": "customer_profile_analysis",
       "name": "Customer profile analysis",
-      "description": "Analyses customer credit rating and financial history for loan eligibility"
+      "description": "Analyses customer credit rating and financial history for loan eligibility",
+      "tags": ["loan", "customer", "profile"]
     }
   ]
 }

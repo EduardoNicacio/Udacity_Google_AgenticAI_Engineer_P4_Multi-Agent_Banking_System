@@ -2,7 +2,7 @@
   "name": "deposit-agent",
   "version": "1.0.0",
   "description": "Handles deposit account queries and balance verification for National Bank",
-  "url": "http://localhost:8000/a2a/deposit",
+  "url": "http://127.0.0.1:8000/a2a/deposit",
   "defaultInputModes": ["text/plain"],
   "defaultOutputModes": ["text/plain"],
   "capabilities": {
@@ -14,17 +14,20 @@
     {
       "id": "deposit_account_balance",
       "name": "Deposit account balance",
-      "description": "Retrieve balance information for specific deposit accounts"
+      "description": "Retrieve balance information for specific deposit accounts",
+      "tags": ["deposits", "balance"]
     },
     {
       "id": "account_transactions",
       "name": "Account transactions",
-      "description": "View transaction history for deposit accounts"
+      "description": "View transaction history for deposit accounts",
+      "tags": ["deposits", "transactions"]
     },
     {
       "id": "minimum_balance_check",
       "name": "Minimum balance check",
-      "description": "Verify if a customer's total deposits meet a specified minimum requirement"
+      "description": "Verify if a customer's total deposits meet a specified minimum requirement",
+      "tags": ["deposits", "balance"]
     }
   ]
 }

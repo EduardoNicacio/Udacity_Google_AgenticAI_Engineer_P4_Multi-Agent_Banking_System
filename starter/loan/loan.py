@@ -1,7 +1,7 @@
 import json
 import os
 from dotenv import load_dotenv
-from typing import AsyncGenerator
+from typing import AsyncGenerator, Any
 
 from google.adk import Runner
 from google.adk.agents import (
@@ -48,11 +48,14 @@ db_client = ToolboxSyncClient(toolbox_url)
 # 6. Create loan_info_tool (stage 2)
 get_loan_balance_tool = db_client.load_tool("get_loan_balance")
 
-# 7. Connect to Deposit Agent via A2A
+# 7. Connects to the Deposit Agent via A2A
 deposit_agent = RemoteA2aAgent(
     name="deposit",
-    agent_card=f"http://localhost:8000/a2a/deposit{AGENT_CARD_WELL_KNOWN_PATH}",
+    agent_card=f"http://127.0.0.1:8000/a2a/deposit{AGENT_CARD_WELL_KNOWN_PATH}",
+    use_legacy=False,
 )
+
+
 
 # 8. Create agent that gets the requested loan value (stage 4)
 class LoanRequestDetails(BaseModel):
@@ -124,11 +127,13 @@ policy_agent = LlmAgent(
 # 10.c. User Profile Agent
 class CustomerProfile(BaseModel):
     """Schema for customer profile"""
-    customer_id: str | None = Field(None, description="Customer ID from document")
+    customer_id: int | None = Field(None, description="Customer ID from document/chat")
     credit_rating: str | None = Field(None, description="Credit rating (Poor/Fair/Good/Great/Excellent)")
     financial_history_summary: str | None = Field(None, description="Summary of financial history")
     profile_loaded: bool = True
-    other_profile_data: dict[str, any] = {} # type: ignore
+    other_profile_data: dict[str, Any] = {}
+
+CustomerProfile.model_rebuild()
 
 user_profile_agent = LlmAgent(
     name="user_profile_agent",

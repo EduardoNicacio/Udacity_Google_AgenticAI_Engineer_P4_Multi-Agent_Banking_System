@@ -13,7 +13,7 @@ tools:
     description: Get a list of all deposit accounts for the Customer.
     parameters:
       - name: customer_id
-        type: string
+        type: integer
         description: The ID of the Customer.
     statement: SELECT * FROM accounts WHERE customer_id = ?
   get_balance:
@@ -22,7 +22,7 @@ tools:
     description: Get the current balance for a specific deposit account.
     parameters:
       - name: id
-        type: string
+        type: integer
         description: The ID of the Account.
     statement: SELECT balance FROM accounts WHERE id = ?
   get_transactions:
@@ -31,7 +31,7 @@ tools:
     description: Get recent transactions for a specific account.
     parameters:
       - name: account_id
-        type: string
+        type: integer
         description: The ID of the Account.
     statement: SELECT * FROM transactions WHERE account_id = ?
   check_minimum_balance:
@@ -40,9 +40,9 @@ tools:
     description: Check if the total sum of all deposit account balances is greater than a target amount. Returns 1 (true) or 0 (false).
     parameters:
       - name: target_amount
-        type: string
+        type: integer
         description: The target amount to check against.
       - name: customer_id
-        type: string
+        type: integer
         description: The ID of the Customer.
     statement: SELECT (SUM(balance) > ?) AS has_minimum_balance FROM accounts WHERE customer_id = ?

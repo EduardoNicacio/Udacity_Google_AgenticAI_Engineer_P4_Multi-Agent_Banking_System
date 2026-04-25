@@ -1,0 +1,1801 @@
+{
+  "id": "9493b349-7019-4e34-9075-035e7cd4ca86",
+  "appName": "deposit",
+  "userId": "user",
+  "state": {
+    "__session_metadata__": {
+      "displayName": "What is my vacation account balance?"
+    }
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "What is my vacation account balance?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-2d10ae5e-4766-4ab3-a68d-3728396bffdb",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "a854b22c-a2b4-41c1-9a34-b1ecbb27a284",
+      "timestamp": 1777042185.0242624
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "I can help you with that. To access your account information, I'll need your customer ID. Could you please provide it? Once I have that, I can look up your accounts and then find the balance for your vacation account.",
+            "thoughtSignature": "CqMDAY89a1_JSFfmKgV5yqo0ifnfoBP8JddTFL-C6A21rcdPDYSKhDNxjBdLY8HhoNFLndcgAp9srmdnWCqVSdPbgXu6uNyGLrpPSRzAV3pKYIb_HWduNCMxBmI7RXGyzig8lGSnA_-UsE_qKsygUw3GNg0skzICCj-59pcuSblM2BfcANQbDZUQpew-FjvLZAZ-Bm7FZyh1dQQflTOZFOw3SNoVutu05S_C8M0xo-ypwXTygzcF_RW-f3kRaLCIVdStFJCA_y1C7lFB-psRIYP3P9CcKBaUmIWn0ynI89BA50p0_ODfHWfNAVXhlUVUVdoT34eOTP02mOUXWLg_hs_efn29BfE3R-YkmwvvlbZllQigAs9TN1xgj5GZ95HeZsfH7LZ5sov1uCoiTzb7W5mfvjfrF5IvOB6M64inGVELMDQ43OANntOyK3_CDA0WSafxvxkJ_GQfDh4C8xP2Zc0gvPz5MKSR8yzt64AhWLB8ZZ3xz1t7LvrN7eW_W732yzQK1LSkBaO3gm-aqYlldaYZa0-lRX8D_reu6gPyS3syOfFQiP0="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 48,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 48
+          }
+        ],
+        "promptTokenCount": 760,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 760
+          }
+        ],
+        "thoughtsTokenCount": 87,
+        "totalTokenCount": 895,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.5227286020914713,
+      "invocationId": "e-2d10ae5e-4766-4ab3-a68d-3728396bffdb",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "064bff43-fd1f-436b-b4b7-efa31fefc95e",
+      "timestamp": 1777042185.0377572
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "My customer ID is 1"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-fff789c7-57c2-4c1f-b239-b8bd0c17d972",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "1011b1e0-da1b-4526-872f-18c9411f97b4",
+      "timestamp": 1777042197.971631
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-2b392756-af4f-4629-bab1-ef8fb6db51b3",
+              "args": {
+                "customer_id": 1
+              },
+              "name": "get_accounts"
+            },
+            "thoughtSignature": "CsYCAY89a18-sffBdYGQ8kxoERVChMaIXucR55b2FVsLTFLbVH3oRLbn7Bq-FJpaYQ0JEj6ATL0GDsjRkxasq5MFgAeoDsZurbZS9UhG8TZmc1BkhcqNCaWEi3NJSI-JnVeBg7PfrwkpvDn_vV1gnYNgcdbIkYBD8o22hxmphvBPB6R8FB4EE4gA-Z6nBk4mGGb8gLiGoRfIP_VgiZ9G4vgEOie0QGuVoMdWczh3Xk0gbnt3nTZRy4blLyUzIAXPfARtsGEtNWrDSqha6pxHhjxB9iDKq1S3H2zpbC3ZPgxo9tj8eG5XWHAL6oYWkmKws_emrpRHz_lwsN7enYhdSaqLmhTRLWUV_Iqsc22Qn9fxzA3JaVfAkOSmvub7aDLYAf92CNiYucz1VxM6IC9WvTVJk5ndu_vM3Y1Rvnpzet_ei0fKNrmaDAk="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 7,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7
+          }
+        ],
+        "promptTokenCount": 901,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 901
+          }
+        ],
+        "thoughtsTokenCount": 71,
+        "totalTokenCount": 979,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -3.003765378679548,
+      "invocationId": "e-fff789c7-57c2-4c1f-b239-b8bd0c17d972",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "3969b8bd-7b8f-4ffb-9d03-76791eb0caa6",
+      "timestamp": 1777042197.9824872
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-2b392756-af4f-4629-bab1-ef8fb6db51b3",
+              "name": "get_accounts",
+              "response": {
+                "result": "[{\"id\":1,\"customer_id\":1,\"account_type\":\"vacation\",\"balance\":\"1500.00\"},{\"id\":2,\"customer_id\":1,\"account_type\":\"primary\",\"balance\":\"5230.50\"}]"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-fff789c7-57c2-4c1f-b239-b8bd0c17d972",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "c977a062-20ae-49c1-91df-021ed2042cd0",
+      "timestamp": 1777042202.983088
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Your vacation account balance is $1500.00.",
+            "thoughtSignature": "CpYEAY89a1_OfMBxD9PZIR-TGPwcTALmS8D7wHmXgQJ7OGL-yNjuWOWjPhYzlrh0lew2OXUXwIvezFgpktijfyYlLd9uexKfqRqEblB_DFiHd5P2LbqbLUlT64LcPU3BOIHdjOQ_WKTdwrLutUrGd4Ln0xDaHjZXh160QUGTooSpdjcKKNDWPr9QhWy6TZPZlQ30KUswdn60i7svvUbZR2d1sRVb8W_vibl71o_-90cJQ0CZqFLLdGHCa_rBjHq_3d9CFd0nO4fUP2WvdPQSPc2b55a4X7lt6woysQGC_MzBqme-3bH8_3s6q1Gy2hnWBU8XbK6eRmloV-9KnMfZ_ilnsYbbyXZnv3BEkoTG575rTYBjMfSYSk_5-YtwrGzsdNtiburVjhfWrSbqLZ6VdHwdAIbEjz4n5FLWv6ESLdRdEGzGHJPumCTwjY4SdhU5NHnFmychVAfnQeCI-bhu8gRmQP7NTYdVEoBteoKIEp5is7TQho_gmJmAhKcD6pfGVFgr1TKJdKsaoRcZ_0RyR7IOZi5oPb2N8JvI19fDTuXuZXkoZUlFdeaTOJ0AQomUGbAuSCzPDkaqvtNDh_ZUwHH2gemIIUkzIijAS9bUQUjdGPDti-QR3Q1l_DreHdRmGP3Ty777ya8tti-J49PwYKpSbUyiKZTYxeEuiYpfep1dTVn3jtgQJemirHHJv1WaUDNan2AcQIM7"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 14,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 14
+          }
+        ],
+        "promptTokenCount": 1039,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1039
+          }
+        ],
+        "thoughtsTokenCount": 151,
+        "totalTokenCount": 1204,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -1.93339170728411,
+      "invocationId": "e-fff789c7-57c2-4c1f-b239-b8bd0c17d972",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "9dbb68f2-6787-480a-8f18-79f97ff3aa94",
+      "timestamp": 1777042202.998808
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "How much money do I have in my primary account?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-5b2b6e48-6b95-4604-923f-33a0731e9d09",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "9656f812-209e-4eca-b322-37d4675959d9",
+      "timestamp": 1777042213.8579094
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "You have $5230.50 in your primary account.",
+            "thoughtSignature": "Cu8EAY89a182G0edhw5fu2IxvESFxQGFj2rKUuDxqNjGgkn6ERgsfAUOknVP1M8BiWrE-7LBXBNLn95m5i20geA483pse7O6Bi_SCeO7A27PWYBM7gLldtBF-VR4HpXdqaty8irCWVFhcM3T43UHSxEZwF-KZLe6p318K_p0qk5uTOUjKyWrZdY282jIzOV-WsJ5SQ-WQtrfNpuzKhSvnmLlFBFkm2TaIuUKQiaGDtpalIQsGF0rZEENw_EPcKPPAXrfJ2jMGu_zlvHxjHSp4IzFaM8xAebxl7bje-YG25pIvtY0W29ewNANBQ25wdn-gC8Kfc1bft8aqYyQBhbp7k6qGbZz7C1fyNaNjUjfCdZXA182ZK3cE675ohS0Di_5806K3MO5GRH_tNcgoqQp8kFGkMyza9-KU5HITge7cFRIr8FF-8lRLHJG3lHJ40MNZKAfHeTes6bQc16OoYcKRUG8kvmQRQ80HeLLxioXzvvPiUOqKfH7Z-e3xOwUtvaqH7bbruoHhoUjLL39DcSPhqZHMt9u8hDZ2Laln-RHAEweh1zcQsR19AHfUu6qjWlaCewARZsuIIW4_cHLmUfe7NlE5Qtdpp209IFElTYsWXZvccqFFRwYUvEODAXWbgM0rzGtmk2KEqj8ZKN2LCSKUQc5MpyPZLwRlZumCVavxk_JChlabOUxVCgF8P9de9Dfq8IKswIOQQcem1O7oHHxq5ATlPF-upD1XgvpMvVZ-F2z3D56eyRo6AMJrcrgTlmUzXDMthGKzKvJOtbY4bnJF_cvUcjqqzOeUe8absChJ_qxUsFOeaWcTzYfih7JHBxAqes="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 15,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 15
+          }
+        ],
+        "promptTokenCount": 1215,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1215
+          }
+        ],
+        "thoughtsTokenCount": 164,
+        "totalTokenCount": 1394,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -1.6121959686279297,
+      "invocationId": "e-5b2b6e48-6b95-4604-923f-33a0731e9d09",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "0b34b23b-6e81-4429-afe8-3ab667a8f761",
+      "timestamp": 1777042213.8716683
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Can you tell me the balance of account ID 1"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-382274c5-00da-49cb-88cb-bc7ff77cd9d9",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "0fd8984e-d3dd-4442-bcbb-cf8e9838c87d",
+      "timestamp": 1777042223.4634578
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "The balance of account ID 1 is $1500.00.",
+            "thoughtSignature": "Cq4EAY89a18TwaaIZ7ltyM5rnEaKAynZyRuaR_hBEgEaAV787QjCGflztSC8ikpjF86V9Ay9zlZ_eDO_d9JoCsB6wfW6TbE9pgi0wEULbkE-P37QtHFHp4uKa_6dMa6d3DFo93JDkXpvqUr_tqLnb7ur-Vevt0QeDOFDsRNge0OLlCuA-eEEPOzzioMQpkcDc8MSZ5rMLgkTVGArms1fGucYpxJLhhaHqOqLOUGjlC83J0t4VNlV4EgqiXQ_J8FgkdIDCgipK-ttLnUGBj8hkihY20Y1XdAIBt9TjZpvxSTrY7yZGkzlQyloimWfgIC1U1bIstmY4QNuOENGvoOFWAEtrw5ClFGnPraL6PKWS3urUYxdTdjUiMhsOkoAsGovjVKCMcN8lnQVqt1xbQxYSP6svwzaNCQJZMzQoH5KRg9UEKkCxRObVDxmOkL6f0hXsbLwgKgIxu510TxmD8sEro81XjRIChIdrNlNQCkXZbFgUnEz_t5MlPuCD_nyZO3H3aMn6DxDRT2a6ei3PNcI20wSdecwy2Tf7kOrEAKfAV0PRsyhqP4O1ustPaHiL77-bAhgbd1Kp9tZfwDp_3OH40396wi4bT5U1_TW3TINkx7c-Ewsuj6kcNpRnfEikVxw7H-Wmz6jWNQXu1hxW2U4PC-f-MFxQceknTG_HDGoqeuBI28DxivQxuKHEf2w_3BBdH2UVgHJTupHS4c1ofd9RHoWicU5pKL3MwnYVM2U9jRQ"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 17,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 17
+          }
+        ],
+        "promptTokenCount": 1405,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1405
+          }
+        ],
+        "thoughtsTokenCount": 154,
+        "totalTokenCount": 1576,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -1.2375401889576632,
+      "invocationId": "e-382274c5-00da-49cb-88cb-bc7ff77cd9d9",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "f76920f1-5c97-4812-a03b-3f82176fb3ba",
+      "timestamp": 1777042223.474544
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "What's my vacation savings balance right now?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-147201b8-e384-482e-ad6b-6576d9326d94",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "63b87c60-77fb-403d-b2d8-b4fd45c29159",
+      "timestamp": 1777042233.710705
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Your vacation savings balance is $1500.00.",
+            "thoughtSignature": "Cv8EAY89a19aYVVG3mAflUiD4M_uxE_8sShA9ArjjeEPV0BeamWtZWPfYjNnEF4nNEBnEHncphDDExzh9humgraDrb4eV8SfwS9hCk8qScShshSsDuSQk3TcptHwC4-4YD_F-N3UKaQFwOdogcRfR9wrUvA8mIFeHb8BNNgbDGZLfnFFJI4UW7jhtoIta2lgtizezPDZcarUiGZZLeMeJCWE9S4fYDsIO1ePyqzDjwqR9F5zV8lMt4YxFT0nZKJHevEWA9aCAkW0pxYsmQYiR3mz7YpMffkKqwXZDWmA1QZLKiePZZQyB7C3Obo1ls5o77_plfA2DGJOW56SmioXIo6Z696RWGOyi5_IJsh-4s4ZCSRg27sUxF8tqSg7hn_ltY1Lo5kveJEyCcXKVcMgYImj4DAT6UuR8sOjGFs0Sx-3_WH8IV1ObiUdlfVZNVGJh8-G8vi46LqqOug1VdiNvHrMO_Uoi_xtt_eUu4qxZj6gHHgN8i5vrFwpdgft9aNLBoADhV9XYeUXPlMZSgVOS_sU_5zf3h2j6a7Gq03rPX9ZjBjiWVq2eCIFBWi2Btwhjwoj01opwTSoHIHcc88ND1tbzEukoF6amhjZNYVeq46oQSnYo_xSOIRpE91kfCS_ZPuKOrCIV0T4igYsRKT_oO98dJMM1FL0-qQyYXJnxHe9PM0Fm7bCDJgl-m-JV1FL1cjL7GfMj22iIRkBYKlWFB55Qt7L2v0F7zR73equjcYBYtOzaHAfNCgCv82KAZDyWvwvF8CLuQS6d9HZcBLEXAnRPAJHhyKo3KBZ0-A7VuQmwoiC8mNI_uW6s9hv0CBPvxJGqbUVqHpCu8wm2dkrUQQ1"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 14,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 14
+          }
+        ],
+        "promptTokenCount": 1586,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1586
+          }
+        ],
+        "thoughtsTokenCount": 135,
+        "totalTokenCount": 1735,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -3.643030984061105,
+      "invocationId": "e-147201b8-e384-482e-ad6b-6576d9326d94",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "6b0b5e1f-9354-435f-9f81-a3503040ccf7",
+      "timestamp": 1777042233.7204077
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Show me my vacation account transactions"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-e1805015-d5a9-41cf-b284-d9c445b6f847",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "0ced9e7b-26f8-432b-8daa-2f0547cf798d",
+      "timestamp": 1777042246.2577097
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-529a609f-2c1b-4f46-8e0f-e8c92ce345be",
+              "args": {
+                "account_id": 1
+              },
+              "name": "get_transactions"
+            },
+            "thoughtSignature": "CrECAY89a1_0XptTZwTm0ccpLK1qJvKtGKcXH29LbDqK1Kl5b5bhIDsKcQ79FfjvXtKlrXL2zvlytppCdlgyGWWaoi2tlQjphZXqYGaQtsZGdU004CC2iNFmGVo374e-Cs9v584GQSwug0LVCq5il-K2X1v_hFlkZ0zZMzUgX9lZN4-DEPWvC3h4earKRilbaeP6cscF4-_JL-9pzBPjrljEM6LPxXDnM90ugMEvOdtvEQtz8yzxSy4lm5tM72McR1FePG1mOakiMp6kVdWSLouh_n7QPACzoeOXZzBzbHOO36ZhE33Ip4lgSzdEJ0xSFifTBiD3-cazYD8OPrhnUXnZDcpDXCiK6OUbqLAMPPEtzNKfCvU45RV1Mq8vHllkt3Xf7eccqn1RCinrMYuxcO9dyxw="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1501
+          }
+        ],
+        "cachedContentTokenCount": 1501,
+        "candidatesTokenCount": 7,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7
+          }
+        ],
+        "promptTokenCount": 1741,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1741
+          }
+        ],
+        "thoughtsTokenCount": 73,
+        "totalTokenCount": 1821,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -2.0232678822108676,
+      "invocationId": "e-e1805015-d5a9-41cf-b284-d9c445b6f847",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "48381c11-bbf5-4297-bbee-fe829fc7c2f3",
+      "timestamp": 1777042246.2745705
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-529a609f-2c1b-4f46-8e0f-e8c92ce345be",
+              "name": "get_transactions",
+              "response": {
+                "result": "[{\"id\":1,\"account_id\":1,\"transaction_date\":\"2025-09-12T00:00:00Z\",\"amount\":\"-50.00\",\"description\":\"Lunch\"},{\"id\":2,\"account_id\":1,\"transaction_date\":\"2025-09-11T00:00:00Z\",\"amount\":\"-200.00\",\"description\":\"Hotel\"},{\"id\":3,\"account_id\":1,\"transaction_date\":\"2025-09-10T00:00:00Z\",\"amount\":\"1000.00\",\"description\":\"Paycheck\"}]"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-e1805015-d5a9-41cf-b284-d9c445b6f847",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "142b11e1-b204-4884-93f8-cc215195322c",
+      "timestamp": 1777042250.8306825
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Here are your recent transactions for your vacation account:\n\n*   **2025-09-12:** -$50.00 for Lunch\n*   **2025-09-11:** -$200.00 for Hotel\n*   **2025-09-10:** +$1000.00 for Paycheck",
+            "thoughtSignature": "CoEFAY89a1_3yPA5-G8ohRUZoff-Y6GZu7IjupdrdfZ76XHKljoyzs1Hx0SDiEKB-qUQAom5pBpg8bp-XW7mlNBdoooYkmEn3X6Qenal7XQsyYnUzrcksivSqmHcrhLpD1-qGaMQqd7K5DioaoBCB9jFwbPcIE0rBtloxrUWozz20jzYSf1er0zG782x5GEId7plXz4V7O-Sf-kCtNi8B-D2aRG6OAGKoYKRuydMHqqjOJ06PaMe59DagmGiqFaIKD30z8sN3nFwhFqdrgAvqvpEVJwn-VDUwCX5KX-nPgCQ-J-a3XHUvr_5k3AMjG-um1faLqm9_0SNwR1qPYrirlbENP63d3iJrSFsWfB7Gyh6viaMv7T-81vnyVqLeaHgdp6FcjlRRpATMeoPvYDL3Dja_JC7bJERZKT1G6w48qL6MFSMFnUZSJQqJtJE39W9Lim3dkKk-onMlQfoOCz83HXK7vgtiEyltMjpbncQWB2BDtG-SsdNrzxcFtAdiDR16g1-xcbB4O2gPVAz8FCNGNp_UJWVsM58E31mH0FOUTRy89GNKYKhBeiS7WB-mLoOPX1JgzsUgqxJHWVkpR8lneJAJTa4HC9EpTfIruWBq73rs46yQPt2uCMxK3EItB1kBZfWKx5YIJgAnTdkOEiQVnZxOPTn87ELDhj4Lw1y1OeMv3NCQCpBQdm-dyI6ATSAz9TccWztMi2IEl9qxfvknQSTTQgMX6gi_yRHV6vfCjWUZ78xuvixxgEEYOviW43rpPJeIqJQwPlpxG5T8zXmz0UTBxkqr8UNp-pyvFAZnDL-qQyVnfVEw_4TbF9RFbX98fs5Axbuexm9a3p4uU8BFUOmhVk="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 84,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 84
+          }
+        ],
+        "promptTokenCount": 1975,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1975
+          }
+        ],
+        "thoughtsTokenCount": 227,
+        "totalTokenCount": 2286,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.19448875245593844,
+      "invocationId": "e-e1805015-d5a9-41cf-b284-d9c445b6f847",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "cb33782d-8e27-4340-8019-1a6a6caea98f",
+      "timestamp": 1777042250.8470838
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "What are the recent transactions for my primary account?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-dea5c0d8-df0b-4aa0-9afc-6438cc1f39b9",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "d4f427a9-0465-4a78-9fae-e7a105a88cb4",
+      "timestamp": 1777042264.3103678
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-226f458d-e23f-4ff5-96ed-41d857c079fc",
+              "args": {
+                "account_id": 2
+              },
+              "name": "get_transactions"
+            },
+            "thoughtSignature": "Cs4CAY89a18MFi7mg_24cI2T28EiCl0XT0P5brtH2nGfb7OX3VA21CVoFPqDJgOQmi9cO-zx-gy7C2JduWbUmtduWTUWbXU7Bwc8tSqgCmOiBuGR9G4zU04qKTlcWxKJIPm5VL6h6MIOz0SsUMoY8N50Y5ZY6EZWdZTtTEDZAI0W1_wzteflOuvw5bASd37w6CexLQeXGon8H3wjiGW7I_rXyg626_zVoQqYw1RhJVL7Ix3xEFJL-NPKwIDBew07xwlQHyHLAzQPG6ZvJGZ6R4eztUv-odosPRMiXWjpRG6bCg1TWegxl__c10DpfTF7gBFWPWsLHxHfENw9kKfllMkXbVeETNksCaLNOHRm7AWAMNvmDdL45uxdho4f5DpIcdQIHev9uabNyL6CAtvhoCzvzYBVxTgDGIzObAJstlRIZrJxMvmHrlp-JCxFvhKOmQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1576
+          }
+        ],
+        "cachedContentTokenCount": 1576,
+        "candidatesTokenCount": 7,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7
+          }
+        ],
+        "promptTokenCount": 2296,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2296
+          }
+        ],
+        "thoughtsTokenCount": 81,
+        "totalTokenCount": 2384,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -1.4659077780587333,
+      "invocationId": "e-dea5c0d8-df0b-4aa0-9afc-6438cc1f39b9",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "935895ab-ad7e-4267-97a6-32d6a4817ad2",
+      "timestamp": 1777042264.3227336
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-226f458d-e23f-4ff5-96ed-41d857c079fc",
+              "name": "get_transactions",
+              "response": {
+                "result": "[{\"id\":4,\"account_id\":2,\"transaction_date\":\"2025-09-13T00:00:00Z\",\"amount\":\"-15.25\",\"description\":\"Coffee\"},{\"id\":5,\"account_id\":2,\"transaction_date\":\"2025-09-12T00:00:00Z\",\"amount\":\"-80.00\",\"description\":\"Groceries\"},{\"id\":6,\"account_id\":2,\"transaction_date\":\"2025-09-11T00:00:00Z\",\"amount\":\"-120.00\",\"description\":\"Gas\"}]"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-dea5c0d8-df0b-4aa0-9afc-6438cc1f39b9",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "cc355e5d-9781-4397-a277-5d6ade8a5a6a",
+      "timestamp": 1777042267.4463873
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Here are the recent transactions for your primary account:\n\n*   **2025-09-13:** -$15.25 for Coffee\n*   **2025-09-12:** -$80.00 for Groceries\n*   **2025-09-11:** -$120.00 for Gas",
+            "thoughtSignature": "CvMEAY89a196_hHiOcsbNvHaCIy16SxOkradWcB-P30lcNb62sVY75JSBTJC3mDZx4gxdfVIJ3XRLI_Yl4xIleZaLUSQcx7XvgvUJgaBFDV4Yn-YfNb0FeqET2T64_wIaFS3Yx9vGR9gzEAo_nZAgW5phmSxc3QzsPnpS_s-pI47HlXgWndEj5sISo4NkxUxo-96x6RI18aYEqPUUQ6AtKrD-3gd6-8I03DSwlD3kl8eE4XCgyyOBKNsvAv3AH7xEOl06aNN0p3cbGtN_rbRYaZQb_sXMN0AcUTsIiitzS4GLdyrMhIhz6otYqdaDMIwhVb6O6BygG5ENQk9sGIeqojK-5FrZU4lVk4dcoiRoEthDbcFBoW7xJ16Yxg1wjV8uOh_KYRDk-zw8BtaTNNfnkkUmSHwvGE37BtyK-GF4h-HgThxzFalDqVpAm7wly3kGOoDljax3TdPgNtgE0ARGlt5d8Wp6n-nlH7Mv2KHPHpKVzXtuNLazJ2ZP_psCC86C5Qo1uF4bSLguoZ7RTehflUM5pxC3sT-M8p9bsx22KWguPiR7XEjJbccUp9BYrI0rUfPTOBN4QP44EPevu5-mNmyIbtWhp-nslzjT1jOOlPwrGmsMaMv4XwkwcFe1b9bGI9yGBrI5sbx_CFbJxeQX_w-29BpeXCWCTkeEtvZFc4LgO9pYd9lRg_oqFZQVYQBQoPhswNFORRE5A12Pj-7abTPSJgBdlqQ2j2KvU74x_ovhBkRI9nkrBoeREcCza97iRXtBoxSpFU6TUGNQAFCVv-npDq5uhzaYhj7Y-Z9fLaEk6GHBiH-vdQEXDxyVRMxrlzIfedI"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1592
+          }
+        ],
+        "cachedContentTokenCount": 1592,
+        "candidatesTokenCount": 81,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 81
+          }
+        ],
+        "promptTokenCount": 2537,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2537
+          }
+        ],
+        "thoughtsTokenCount": 224,
+        "totalTokenCount": 2842,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.05145411432525258,
+      "invocationId": "e-dea5c0d8-df0b-4aa0-9afc-6438cc1f39b9",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "7d778be4-ce18-4b28-bd18-44a8291ee7bc",
+      "timestamp": 1777042267.4604902
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Show me all transactions from September of 2025"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-15e99c1c-6e90-4ed8-92ca-41ae5a51a702",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "5882cddf-19f9-49aa-9581-9a7ca18abd54",
+      "timestamp": 1777042282.956718
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "I can only show you transactions for a specific account. Please tell me which account you'd like to see transactions for (e.g., your primary account or vacation account). Also, I can't filter by date. I'll show you the most recent transactions for the account you specify.",
+            "thoughtSignature": "CpUDAY89a1_ZUJOVq1zFQPvrFSLBrlOPYftlhRfr1_a25AKczGlK9-JqpmqvrEd0KUnEPYQYJx6KZcOdZfYyqPxubzHzd08Bh6ixUJ1jQHj5N1M_Txin_nSmazoieeIuZUZnHPK4Babul4vVK_VV7_gsDXx7FzFvqigHdgkhX6VqQmVo0-8hwALDRIwVIUxTsCigax-m-TCh1n9Nnx_pUwrzyHbtAjozGlGFYJ06lmabYIODOh__EkUg3L911QJPjZtrxj9xeV8zqGnbXv5nf42wlFvh9oWh9ZdjY9zYeIoIx7LTv-MpQQlKyKcBAMs3PyiA5rAl0VnR1Q4y1A6ZSYnkvNVL6AATZUuX0qHJ7lVTZYydZnJtKrCRn4AKLOOn-V4pgoN6kvPz_mWVdt9s-zICGoR4qHKPlpVmjQWkjG_OEMftZywrU2mV9aqGW9dHqtgktQGKERCF8qGyAJLxV_BI1m0LwFeDXXc3kpIU5re1TCe__5zki-Tz6tBaC369qt3uvybYA7lRppxYcA_iTxKr6seKq3C3"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 61,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 61
+          }
+        ],
+        "promptTokenCount": 2854,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2854
+          }
+        ],
+        "thoughtsTokenCount": 79,
+        "totalTokenCount": 2994,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.531524658203125,
+      "invocationId": "e-15e99c1c-6e90-4ed8-92ca-41ae5a51a702",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "4aa28457-306e-4c88-8ef3-90e9a34fe5ff",
+      "timestamp": 1777042282.9729528
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Account ID 1"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-e41eb905-8cba-49ca-a318-804431114a6b",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "630e602a-e406-401f-9259-ba5aec50db8c",
+      "timestamp": 1777042292.4933357
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Here are the recent transactions for Account ID 1 (your vacation account):\n\n*   **2025-09-12:** -$50.00 for Lunch\n*   **2025-09-11:** -$200.00 for Hotel\n*   **2025-09-10:** +$1000.00 for Paycheck",
+            "thoughtSignature": "CsAFAY89a1_X3bcYqXtYO7VYGimZsWc8PpLnh5SVZGhWZjM2OI5JRBksno3oK6-PRSr5zTJVfiR21dP1TohLMRpSdkcDbfGfCE42geN6drUNGybxK_oBZeVPfh4mSCKXljXtqNVRqtWX0c6xXfpSs8GmfuP28orTNQeel8PsByyPhMSyzPSSQwg6C3-oLNd5gW1fEPELBXs6ZzvqbB0v4PdhS4DbrQrztCdKc4tWaexF27EdtkQHMthaQna-WwdnPjMk4-Uhu3T-tILBK7abgAABu1t4Fh1rpbKNwuenTKe4OgzVyNYrKrbbUyW5NdxXzomB0lOPSJ02KRu5a1B3RODMU5NX0RmFDyg2CiZldAXnLX-02_aRoFPqnrYrqhKWlURUwSTwePtdDBfgMcQLqObubsEPK4rc1DDv6cKQgivF8AGR5tiYWSPC7eXPkGOAtiOxRkDsvS_yLMj8IdFyiQXzs3OZ2AcPHer7VPdKAYYgipRKiMK74a8DEygC44UDPDtFlcG3zPqCBSqMzIacmQIaTbTh9w5YhaWY7oUFaKoFomtwsEs9FHMeXHZZT4CfbUT3szJ_22oK2LlBwprt2u0tEfcFxfLDiL5xZyAzsoNkixLee2nBbgN9CWvGBjrIcT3jpkaTkjbdXQB5jmeOEcRLLOIlr5WK4cMUGBOX0ZrEwOWEqxGIMCctigXhGrK1e6u8L3_HSpPHuPWx2DBn9uPAY0Fcqlw0Tt2naZRVJ1wJ3vB5IPB6oxvz1lYk7jBdnz0Ee2g4XO3h7ZWP0aqoKW9T545wt-x3wzHa_GqluffM4TRGYWg5tJPkEZtz-eYnGJ7B8B2KtTNqTCCo68OosdF6hruBjLQE___-PaXJTjvZB5r5C5IUq5JCmgFcwY0LAVcwE7RzGp_Yps0DYH9EPJ3JXUaIPg8w2a8XP3_zF2NI5Rg="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2455
+          }
+        ],
+        "cachedContentTokenCount": 2455,
+        "candidatesTokenCount": 89,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 89
+          }
+        ],
+        "promptTokenCount": 2998,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2998
+          }
+        ],
+        "thoughtsTokenCount": 191,
+        "totalTokenCount": 3278,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.38179110409168715,
+      "invocationId": "e-e41eb905-8cba-49ca-a318-804431114a6b",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "93534ab1-ce1d-49bb-b65c-4f523e98f718",
+      "timestamp": 1777042292.5152228
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Now do the same for the account ID 2"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-85fd2229-af85-4237-b517-8c20c9de4e24",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "5eff876e-0b86-4ba1-9ad5-e0ac4054f42e",
+      "timestamp": 1777042305.4975007
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Here are the recent transactions for Account ID 2 (your primary account):\n\n*   **2025-09-13:** -$15.25 for Coffee\n*   **2025-09-12:** -$80.00 for Groceries\n*   **2025-09-11:** -$120.00 for Gas",
+            "thoughtSignature": "Co8EAY89a19W_AaDz5VeZEXDF7CHVi6UjzROziyYqkelRAXDN3qIKx8Tul6GOi6rgt8Yvbi7FZfMOX4DXcDeXNCujNThPFWk9Y8V90t1iFuO6BrOjGtvZWpI2LMPukHBe2n2ud3G9t48b9zGP2NVtySsxGiQ3mU2Gu8qhwmiNHd0UXAMSUaIZh9MigH47BxuI6KgFfxkDDmLQ6cNIZ11q10nmJqkmMg1_3t-87zKmii5NPh5sQ-oHgqSBc8uLRh4OQLJM_unwgIds8CyUAMpoQMKZMg1X9d6XpoxFA7_gj8MfT0E1ucZRc8Jkvjx6G3J0VWL6G8odFKiWHdneT-0JfHslkkT_ORrn-fjdNc0Pxx96dJO9lFkSLUJupnmuY4Pu2QP7_bhWrb7QgOABOc12gvVdQUIb3Jk5no8BW1viCXzHSpCr7KbzUhqJDCqseVYNx6yMdoHpHNtsmWvmo2no-yGA0IIqf1idOZV_U_LWu43bTK6iNRJ9Z4oV0jasF3Ha6-ddk9WYB9MdI3yzjzP-E0nKhouLOqNRq0JvmfetCTaQc1hwy9Oe7bRHUsCD8lgIu-Qre6sy753GHS_D7E0E-z4E8HEKBRRPPN3jtoLuYbeouiA_3cbNhAjAnyawH2EoUPg0Bdtlid1LYKMEto1a0m0ddpnW-3tO6xaZZV8E3ZEsTDOKrpeckIf2NcwP3vp75o="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1660
+          }
+        ],
+        "cachedContentTokenCount": 1660,
+        "candidatesTokenCount": 86,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 86
+          }
+        ],
+        "promptTokenCount": 3288,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3288
+          }
+        ],
+        "thoughtsTokenCount": 152,
+        "totalTokenCount": 3526,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.11464988353640534,
+      "invocationId": "e-85fd2229-af85-4237-b517-8c20c9de4e24",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "623f1402-e8d8-4092-9789-3f5e20063d63",
+      "timestamp": 1777042305.508249
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "What's my total balance across all accounts?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-e00c50eb-2576-402f-a017-ff22d968135d",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "96845835-93c9-41b4-a0a9-f339d385fdfc",
+      "timestamp": 1777042321.1688848
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "I cannot share the total balance across all your accounts due to security policies. I can only provide individual account balances when specifically requested with a valid account ID.",
+            "thoughtSignature": "CrUCAY89a1_QIQOxeckSiO4v0a41bZgmSVWwNJl_007DxAF_hr7u_AMe-ACPNxVInbyTA77hHMzWxlt6IbKfAx-ThsCFOMWgXnHs8Tf1Kr8tfe_mW-XqCunnKw-Oy9ZVAHE23JDIOxYPXJTvhLphq2q4bSh1TCzaZ4RzG_xo1luwGqHuaD_D8WywS98d2J0NqLBlqbnxKK9tE0eiRyEeIxLdxH561LJaLsJCsULjYi1XgVGyO3DrHEoHMuq514AxC9MXsdOLa76JciNC6CRH1TxsA9ukHhkMtde2Sapf2d1FfiDebZ4I04GhCRuz8Yv3T2RCmKeotW7QaGSAAJWnBudEZks3ud-NkPANvXNVCzWG4M54gGNY2TlGEONSEw2CstKsd_qYASPsvGgKdldvvlvpzifryEKM"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1677
+          }
+        ],
+        "cachedContentTokenCount": 1677,
+        "candidatesTokenCount": 31,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 31
+          }
+        ],
+        "promptTokenCount": 3536,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3536
+          }
+        ],
+        "thoughtsTokenCount": 54,
+        "totalTokenCount": 3621,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.3846928073513892,
+      "invocationId": "e-e00c50eb-2576-402f-a017-ff22d968135d",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "399ad8c2-0728-4af6-8bef-09c91e89e8ba",
+      "timestamp": 1777042321.1817927
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Can you tell me how much I have in total for vacation and primary combined?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-701f1c6a-39af-4174-b753-45ab60aff38f",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "fee3b78e-7cff-470e-8fca-f64af7d693f4",
+      "timestamp": 1777042330.7833612
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "I apologize, but I cannot provide a combined balance for your vacation and primary accounts. My security policies prevent me from aggregating balances. I can only provide individual account balances.",
+            "thoughtSignature": "CugEAY89a1_vGmiaftc0AV6VoPdYFhZRPkd2d3PlBAqSFs0vxQk8aGSPdAKKa7Ce4mcq6V1C-I3gwXj7tB5AcgWTfCzWLsvqfcDr5xJR5TRgS3ZUoX_14yUwWNV5GUolFZ2wnbU1LIvXQy8fYuU4fct508F3sgnnE82K69Gx6FdoWVt2zvDZPWlFt0XFfDSF2pTwQ1-pL-uUIf-f9COVB8Xo6iFjOwMKrnrsaJ_0dpVaBseJnq5qM-vlKkT7z6a-7uPZvh1VGjVFek4-4IOHatHnC5tf0I2rbdVJ4yU5aDJoGiOW1Ji7tp5-qM6AWDhQVSWBJcQOcOXPCGKvjkrRXuBamELBdGXpr1zhx9OIwWpCCwmD4C5NAa5OV9MpnPrgJ00xbeyBBFsMoRUPE86PyMwnB4CTTd_uhH3CtDAyTi1Zzr5-gaK_slH6y5oPQKVG-k3Zcs2aKDBTvVOZXyKRwC9TRgay0BBn79TYaDs6E_VPN1coK-aa_HfiTOuWtPAYw6ENyODn6IF7oxgrospYKNNXVOrfJg74B-J4OPTfuMSpJ_6yrArsQ2g48HtIrnNZYAQ2TRP9z4Url14pI62BAV7yLAvHJVHVGBQ-XtGmtLYMY-W0Qq2h9TIGw1WVI_SVINkYTcQnCBnFISYbtJzl6cyEBoObxZkfTXczyLhy-9tFi8Vm0j0Yna2q9y4gh63koKuEHNIV2_921R-FMgEIqKfvsb05Ysxz9COhx1MHUuwY8aCIWAoQeSE4nzDhVnYQlwQBV1GvbBxtXY9csH9xEPo5RUeFLspCL117tLq7T5AGfiO1Q1UAiT4qpQ=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3361
+          }
+        ],
+        "cachedContentTokenCount": 3361,
+        "candidatesTokenCount": 34,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 34
+          }
+        ],
+        "promptTokenCount": 3637,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3637
+          }
+        ],
+        "thoughtsTokenCount": 121,
+        "totalTokenCount": 3792,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.9127700469073128,
+      "invocationId": "e-701f1c6a-39af-4174-b753-45ab60aff38f",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "95a5b36b-f1f9-4f30-a9b8-f16a6baba70a",
+      "timestamp": 1777042330.803495
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "What's my combined account balance?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-1ad689ce-6cc9-4549-8e53-e1a40abffcff",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "bb9f6b32-1323-4be4-a1d8-da608909dcdd",
+      "timestamp": 1777042340.046596
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "I cannot provide a combined account balance. My security policies only allow me to provide individual account balances.",
+            "thoughtSignature": "CpUCAY89a1-5OmZpCrKBQ-065UF8iIYsdhzLpOxr6Ija6aEi8dNSENLxrWp1-1AdgDuVAMIE8zuKEXuAOy21rdyRBsnG1t0_-86gInoqR7K9KqWQP3ezdu6tUDwjB1eAE9CRClc6AnoZjx1xTXtzeceYn_Wnk6UZcUZvnvrIZ5UbNDBaxW3i4-ZonOtE5RENzZdsu4T2wgFb438vsx_vNJooqo6ujCQRmrOHxpR7K6tghc2TfXT47XeBdwgsncDHwCykU_miLuNRbp8uzAhEeWnIVOUR68tLkUqipV1rciGhhqyKK-DgPFxsR7_yJJ7qPDF28PdmiArmnD23lEPy9mJnhjj7VVBtGHLlaSZtGr7FvIpUaEu3NA=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3377
+          }
+        ],
+        "cachedContentTokenCount": 3377,
+        "candidatesTokenCount": 20,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 20
+          }
+        ],
+        "promptTokenCount": 3800,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3800
+          }
+        ],
+        "thoughtsTokenCount": 48,
+        "totalTokenCount": 3868,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.8316540718078613,
+      "invocationId": "e-1ad689ce-6cc9-4549-8e53-e1a40abffcff",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "b693dc83-490d-48b6-bbfe-de1a5fe0847e",
+      "timestamp": 1777042340.057387
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Is my total deposit balance above $5,000?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c1fca1d7-c6e5-46bc-825c-35f752f51e95",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "e39d8096-736a-499c-8be5-1e8bfb9a60ae",
+      "timestamp": 1777042351.6307938
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-725148df-81a2-4e0c-8091-81b95b0870a7",
+              "args": {
+                "customer_id": 1,
+                "target_amount": 5000
+              },
+              "name": "check_minimum_balance"
+            },
+            "thoughtSignature": "CtgCAY89a19WKdpp6jqJozvIXh0DxIl1gY8wETLQBY4JsSNqzw6DKNqZi9iAduRjgqcLC63AVNTugsC32gbuOrnMrGL7ytpDIzw3q3RujvMzH_wJRh1LeL7KfaDB0Dn7F82VT0ZUMn_iwhETYAOZUqv4TlYpGKcikkQNCGKhudUoIrTi21OIv3mLjna9RVwGoQi4Sd9csb7bzHInygUyRvxKrSbEX90C8JKr76odw1Dvr-npFG2RCIzx37M5VsiFwy6mRUP59OeoEuO9zc0cV730gS5pFeho9zZaf_OzmxXllIUYDdOznsMGnT3asHmUj5mzsuldSahZMuNXgVjQ9XwR0pAaRUONFXlKWUrvv7ZSn5Ni1I1TI4gQ9YzVGlGfsw51YGQ0Pl7uCKEZO1MDvsjgJnsZi85c8ZWEiE0TNA05uhfJ-yiDzZp2NN6GpNeqwq3D_eEixhgxIV4="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1689
+          }
+        ],
+        "cachedContentTokenCount": 1689,
+        "candidatesTokenCount": 13,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 13
+          }
+        ],
+        "promptTokenCount": 3881,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3881
+          }
+        ],
+        "thoughtsTokenCount": 90,
+        "totalTokenCount": 3984,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -1.0122003555297852,
+      "invocationId": "e-c1fca1d7-c6e5-46bc-825c-35f752f51e95",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "c585b732-9db9-4a47-bed0-b83fb216527e",
+      "timestamp": 1777042351.6430871
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-725148df-81a2-4e0c-8091-81b95b0870a7",
+              "name": "check_minimum_balance",
+              "response": {
+                "result": "{\"has_minimum_balance\":1}"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c1fca1d7-c6e5-46bc-825c-35f752f51e95",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "2eeca1ad-1b6b-4771-a04a-becb48a94cce",
+      "timestamp": 1777042354.4855778
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Yes, your total deposit balance is above $5,000.",
+            "thoughtSignature": "Cs8CAY89a1-f9mL_ZdVQfvoZSEtAbNL1yTckq83fUgO39lZoqT9E1NBYhS1q2kEuN9IHcDyTXmrrdTqFPd3sVaUP8Rgpi0w0SXnQVSXBdLstxbnvbe-YG5u362pTqmVcFzM33JhYVCrdfMDuj1LwkN9zVCBFm4wNMGTPrElNxZTG3VYxIIT4MDMwLsEKmUU-PepdHjedunFXManBo0EEFGCip7zlh0uIQdVbB_VyjdTqiflJOrpVAZ85ak0dgSVcr6k8z0Nx8A5V4O6TQ8-ZiPkM0OOuCNhkfIUkzxKo4K45TyAXPteMsKDhg0Puy22Q0tPZUmHthlKgGRPXhjc7YzZb02Ka2Gt2-cE2FwxOBM5wsbUwj-VOPDEMIFmwq2sSNVvUknRjE3Maeemtdl9VQey1uCk228PkpZ_mOhXAayk7J8_Zhkn_5IzYtJ30vilFLZo="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3367
+          }
+        ],
+        "cachedContentTokenCount": 3367,
+        "candidatesTokenCount": 15,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 15
+          }
+        ],
+        "promptTokenCount": 3999,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3999
+          }
+        ],
+        "thoughtsTokenCount": 89,
+        "totalTokenCount": 4103,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.4900013605753581,
+      "invocationId": "e-c1fca1d7-c6e5-46bc-825c-35f752f51e95",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "692a7c82-198a-4b6b-9963-25e177e18ab8",
+      "timestamp": 1777042354.5002818
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Can I afford a $8,000 purchase with my deposits?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c87a2540-774a-41bb-ab93-223053cddcd1",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "9e7bc988-a851-4beb-a4a5-61bfacea4041",
+      "timestamp": 1777042364.8864195
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-038cd02e-8d9d-4a32-b420-cd48f63cac49",
+              "args": {
+                "target_amount": 8000,
+                "customer_id": 1
+              },
+              "name": "check_minimum_balance"
+            },
+            "thoughtSignature": "CugCAY89a1-4FRyLRripDgvkx62p5xJpJmLofj2a5fpABn0nhcUREVCcf4gTao0_0IvualrY9KhhJ2DiVqKekYpg9YGj-trKImuKnnq6qh5vGpyb7918ScLcdIDkLEoYip_yEPaeGFVXWER6bZtaQgHLPSMZxaIxTpdZYcoYzBDSJOY-1k2tUCwNU7qd2Rz7Gl3B773LNtjLrD4mS-OOswjgaxwKxkBsUij0tUNvDVsfTfOdZSM1QYVrU09ZZVtOhGExyMN2G2qXvHAtHuKHvmucrP_XwRBN_WKo-AH1zOJkpQr-wJeXB0jPDbeUt5C8CQfgqkj6u8x6Fi6NS07jWI85RSQrRfpLi9Mf529A12vX1pNP3N99DuPe1L7u9nxoI3BErR07u855Hy7YzdDO_M5Oo-Ij7qP6VY6ieHE3t4tdGJHiq9kAuN0GPzuRisgjG9QpLw6NoOjSvzHfOzImMbmbr9Mhcy13fHkm"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3375
+          }
+        ],
+        "cachedContentTokenCount": 3375,
+        "candidatesTokenCount": 13,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 13
+          }
+        ],
+        "promptTokenCount": 4118,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4118
+          }
+        ],
+        "thoughtsTokenCount": 89,
+        "totalTokenCount": 4220,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -1.642389884361854,
+      "invocationId": "e-c87a2540-774a-41bb-ab93-223053cddcd1",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "6db532d7-4510-45ac-b22f-d9021ef21a47",
+      "timestamp": 1777042364.8952634
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-038cd02e-8d9d-4a32-b420-cd48f63cac49",
+              "name": "check_minimum_balance",
+              "response": {
+                "result": "{\"has_minimum_balance\":0}"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c87a2540-774a-41bb-ab93-223053cddcd1",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "100586bf-857b-4b48-ae28-08626e098d51",
+      "timestamp": 1777042367.897564
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "No, your total deposit balance is not above $8,000.",
+            "thoughtSignature": "CtgCAY89a18RBbn0F4mJ6kbUFNQMis7t5Rw5wNZrDTWBIJo7xoWG5a44aricCwL5x37f4qa8j-ief3Ij3rzyg9OxOxfpMHHjjcN6JBWOeeC8MtDopEOjuZTmVuMTSBAvSCxIPsIXWqoIWckhYP-oOYPOXj_WmidiNKkJG2zE-9zJCWYJqUv7c3INzBQQem8XmwnVbV_YjS610app-TOnjLbO1o2pIiUOeq2YHwEprDKkqOe5P5P-m49EexjWDwDhn_2fmkowXsq55dUc2WL_NU4V_dWt1XUzZt7d8voLzTWEBPXPgowf3Nyw51SIZdqs2Fg8mBJFMH-sWFMyYuEIfsCsZ8Yz28ftK6rNqMw2yrrvzbgY_uZq6SKe2VAc_QeUyNFXYAlK3XFz8TovC90HiYrAkHzYHittQlVo-mlxzx5hAKVTNm_4v7bPnGo3bJeOE2G2z6dC_UaAcIM="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3364
+          }
+        ],
+        "cachedContentTokenCount": 3364,
+        "candidatesTokenCount": 16,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 16
+          }
+        ],
+        "promptTokenCount": 4235,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4235
+          }
+        ],
+        "thoughtsTokenCount": 91,
+        "totalTokenCount": 4342,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.13794414699077606,
+      "invocationId": "e-c87a2540-774a-41bb-ab93-223053cddcd1",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "14a9c76f-e6bd-46c6-9aee-004523d70285",
+      "timestamp": 1777042367.9110818
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Do I have enough for a $4,000 vacation package?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-d37ad89e-7e1a-434d-8ac5-e605be103694",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "ed45b795-6908-44a8-81e6-0a3f91cfc9ba",
+      "timestamp": 1777042377.9455132
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-4f9b810f-2e61-419b-9230-13c462dcf0fb",
+              "args": {
+                "target_amount": 4000,
+                "customer_id": 1
+              },
+              "name": "check_minimum_balance"
+            },
+            "thoughtSignature": "CqcCAY89a1-iqrFfGRvpzzB82Q0gebKm0kCSBPP8XvRPr9dtvIw9FVkgg9p3rFmDkP9UTuAbrd334BHWRaknlfNp1NAiN43BPFB_tz2jRlQDHNzyXj7_A3-jUf05brTNXjwNmqUgTkvpJjo0VeexDPQrZ1KTtDwqffkua_1cvevZXw4KDTKmfI23dnheeSiQmMWZ06tzGmT7MQF_4zrnnVef3cnN0hDGPnL3a29dEo_sudYo26v-khKi63JfGOLd8HUV9MUv4uTi6FbWOxYGvTZJISATdmqMJ7NkXaBFNKrNZeCUCHjIDxjWqZafObh7jw9STbGaC3AVii5otT7L9ly5cMKjbJ_8BjWwAeDhDd0mxHMzfij7t8Yx6jBo0lA3dBrgKg2P0ns4Dg=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4215
+          }
+        ],
+        "cachedContentTokenCount": 4215,
+        "candidatesTokenCount": 13,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 13
+          }
+        ],
+        "promptTokenCount": 4357,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4357
+          }
+        ],
+        "thoughtsTokenCount": 73,
+        "totalTokenCount": 4443,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.5253649124732385,
+      "invocationId": "e-d37ad89e-7e1a-434d-8ac5-e605be103694",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "82c66997-2fa6-4486-8849-925739ce75d2",
+      "timestamp": 1777042377.9569619
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-4f9b810f-2e61-419b-9230-13c462dcf0fb",
+              "name": "check_minimum_balance",
+              "response": {
+                "result": "{\"has_minimum_balance\":1}"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-d37ad89e-7e1a-434d-8ac5-e605be103694",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "dcb0e3b2-4dfc-4360-8623-a2d66183d4cb",
+      "timestamp": 1777042382.7755895
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "Yes, your total deposit balance is above $4,000, so you have enough for a $4,000 vacation package.",
+            "thoughtSignature": "CssCAY89a191mUJwjg3c383zB2IvsKum29PilPZ7x5tjBc3q4CLaskDcq2v6SyFqjzy-IOHIJgjqxfqYNnCF9hLK56g65DSRUVA4TcRXts3G4UM5DKEaoVBFAKUI5czk8U90kj8pmbjkNQgPNU6tUPTDq3FkcSU1XvItQb0jhLqhJtAhblM_N8m7Rn9XsJEyIapn-rJrKJU1BWz6sfQ4Q4EC1krfu84Pg9r8oQdvJcYrgZXEEDzpzXsuMtC20-JSEWSZntxjWLxP6d9HBhxP48nJyFrpKTVVtEx_eFTFKh__1uppT7HUmC_U9vmQ6qAC3skqjQ_1QSdFkXKuYgayah-uR9W_Jm0U0CKEo4b7AJg1Ltbq0XYZDBAWjCnq_LvLjGMwWfRnvrkoxChm1F2oeTFGuAfeHw96zlkx5cptw3ytStplNrXxnOGk6PbA0g=="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4199
+          }
+        ],
+        "cachedContentTokenCount": 4199,
+        "candidatesTokenCount": 30,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 30
+          }
+        ],
+        "promptTokenCount": 4458,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4458
+          }
+        ],
+        "thoughtsTokenCount": 89,
+        "totalTokenCount": 4577,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.10064361095428467,
+      "invocationId": "e-d37ad89e-7e1a-434d-8ac5-e605be103694",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "32d68a86-b27b-4ec5-b71c-06916ea3dc1c",
+      "timestamp": 1777042382.7949095
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "What accounts do I have?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-18b1b53c-b6bd-4e63-8bfb-8138686b738a",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "1f8953c9-aee9-4bce-8ecd-a3a33a07d04d",
+      "timestamp": 1777042396.4058905
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-4fa1119a-b858-4cc9-a3ba-be579722a3fe",
+              "args": {
+                "customer_id": 1
+              },
+              "name": "get_accounts"
+            },
+            "thoughtSignature": "CuYBAY89a18pVZPQDWMCV2mp4rBPim4w-4MbWlt1CUAOngInGH8p7YaQx5hy2QKd0nlCLHvWQjGp2CNBqw99Utmz54f8O1ZOQr81Tl7hqOPpcv7jQlW4lP2K2uFBfUomVZDv1kcPL38zLUwY5LPdMw_SZzrKQKd_Ujr9dieQ4oczBBViJ5NpLfpfVIjWPQKw6oVtkVz0pEBW9sB8bkbM85VP8vP7xyVYQ8tdfNmK73I9nvzH0yRYwdJnbKA4qElQMvn-hunNxXcRli1vQiKB_hsvoEXnJhV-h8eWaI2acz4vx1q_XWjNQxQ="
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4209
+          }
+        ],
+        "cachedContentTokenCount": 4209,
+        "candidatesTokenCount": 7,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7
+          }
+        ],
+        "promptTokenCount": 4583,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4583
+          }
+        ],
+        "thoughtsTokenCount": 50,
+        "totalTokenCount": 4640,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.851480347769601,
+      "invocationId": "e-18b1b53c-b6bd-4e63-8bfb-8138686b738a",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "longRunningToolIds": [],
+      "id": "8e77ff04-69ff-4d76-af96-0014c39b166b",
+      "timestamp": 1777042396.416964
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-4fa1119a-b858-4cc9-a3ba-be579722a3fe",
+              "name": "get_accounts",
+              "response": {
+                "result": "[{\"id\":1,\"customer_id\":1,\"account_type\":\"vacation\",\"balance\":\"1500.00\"},{\"id\":2,\"customer_id\":1,\"account_type\":\"primary\",\"balance\":\"5230.50\"}]"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-18b1b53c-b6bd-4e63-8bfb-8138686b738a",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "6e3cfaf6-4c9d-4e4a-85f0-0ba93b01d516",
+      "timestamp": 1777042399.2722294
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "You have the following accounts:\n\n*   **Account ID 1:** Vacation account with a balance of $1500.00\n*   **Account ID 2:** Primary account with a balance of $5230.50",
+            "thoughtSignature": "CokDAY89a1_81FBgKin1MLu_Ec9iST_mgooPkapHEpjyBN01MDI8w3u83jwHeTcSFgERhKELdfnBuMJm4LivCpE2MECwHG7wU_cClzBWL1J1O6wuuA77uGt4DnQYr_xhFBuWSL5rV2O8-nZHr3-3D2AmNzCaxb5s-tC0KqOrSsXUG8ZHb93AKHSOr9C_RDXMXZNlGAm3dNmGdZskrOom1ejhFup6eq2BZ4Aumc50H8qPm8heOojyehRnO2iWURCN3zH-jlYpoZgRqYgWRvdGHmy46GAg8J1ZdrffZPFrCdZ5upcmE8b9zkxsfMqeoVlnYi8aEDem9eL46zY1_53ezmBN0diAXFR6u57bFWFyhRmV_KxlDVquFAxOi8kNrk4DqdsTj6n3tmZtlf_l_NsRaRpocwwusq5SAWVhrnhcc37XvQ3KOlroFHL-Uavm_MBz-uuSZEdRNswS8lN26i7QTABjAEoJfjTX5bBWi3BfoXEsY2fRQVHL9uQulmVqsL9LpBgeCH3wzClvS8AN"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4201
+          }
+        ],
+        "cachedContentTokenCount": 4201,
+        "candidatesTokenCount": 52,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 52
+          }
+        ],
+        "promptTokenCount": 4700,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4700
+          }
+        ],
+        "thoughtsTokenCount": 117,
+        "totalTokenCount": 4869,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.18903880852919358,
+      "invocationId": "e-18b1b53c-b6bd-4e63-8bfb-8138686b738a",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "963f32ef-d1f3-4ddd-8375-bc7cb2272450",
+      "timestamp": 1777042399.2858884
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "List all my deposit accounts"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-1dbe7b48-ced3-4abc-abde-69b82751d8ea",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "c6454d7c-539c-463f-9d02-63c2e51c4872",
+      "timestamp": 1777042409.6005101
+    },
+    {
+      "modelVersion": "gemini-2.5-flash",
+      "content": {
+        "parts": [
+          {
+            "text": "You have the following deposit accounts:\n\n*   **Account ID 1:** Vacation account with a balance of $1500.00\n*   **Account ID 2:** Primary account with a balance of $5230.50",
+            "thoughtSignature": "Ct8CAY89a1--gpMxZYNw9JzWqkqp2Yv5NIaly4A8f-CVmV3S9lX-F47Dg4egG2GvIetxHNLcq95Yws0HGmOytvVFE3Avj5b_I95upiL84eIbtMLMdKcdeupV5VxA2eEs_vYqlRM5XTZaa2wNav1npiX3zkqzb-EjP6d1Tmh8yhhL5wV404eW18JmDGAq-J0RdbxsRhQPHoCvFpoOF_9qSGpZgjkxLZmMiqR3w8d__R6qJUgkmjDoZWD_W6mh0-nRZVlZMNcPV6FsQprr2PIUTfO6bnr9del6bbRvUUiE0nQcCCnzXc0gaacg48-J3xOCr1luvfBFJRzRslr6GgtEgkRHLSId4NVuYiceGafOHWH56RAQ3cfwj-7leShKUnZ_g1T4FMg7hU2RZC_U28FFOcICv7TRlhnXEi88fFPLu4vNPHnK_2RwvdEXhTERo8cefI-e4xWVXqqrQ1Yle5knjl3s"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3374
+          }
+        ],
+        "cachedContentTokenCount": 3374,
+        "candidatesTokenCount": 53,
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 53
+          }
+        ],
+        "promptTokenCount": 4874,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4874
+          }
+        ],
+        "thoughtsTokenCount": 77,
+        "totalTokenCount": 5004,
+        "trafficType": "ON_DEMAND"
+      },
+      "avgLogprobs": -0.45252641641868735,
+      "invocationId": "e-1dbe7b48-ced3-4abc-abde-69b82751d8ea",
+      "author": "deposit_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {},
+        "requestedToolConfirmations": {}
+      },
+      "id": "2b7dc616-1357-4e8e-ba8e-2401618b6fea",
+      "timestamp": 1777042409.6220207
+    }
+  ],
+  "lastUpdateTime": 1777042409.6220207
+}

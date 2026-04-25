@@ -39,30 +39,29 @@ get_loan_balance_tool = db_client.load_tool("get_loan_balance")
 get_loan_details_tool = db_client.load_tool("get_loan_details")
 get_next_payment_date_tool = db_client.load_tool("get_next_payment_date")
 
-# 7. Loads the Deposit Agent via A2A
+# 7. Connects to the Deposit Agent via A2A
 deposit_agent = RemoteA2aAgent(
     name="deposit",
-    agent_card="http://localhost:8000/a2a/deposit/.well-known/agent-card.json"
+    agent_card=f"http://127.0.0.1:8000/a2a/deposit{AGENT_CARD_WELL_KNOWN_PATH}",
+    use_legacy=False,
 )
 
-# 8. Loads the Loan Agent via A2A
+# 8. Connects to the Loan Agent via A2A
 loan_agent = RemoteA2aAgent(
     name="loan", 
-    agent_card="http://localhost:8000/a2a/loan/.well-known/agent-card.json"
+    agent_card=f"http://127.0.0.1:8000/a2a/loan{AGENT_CARD_WELL_KNOWN_PATH}",
+    use_legacy=False,
 )
 
-# 9. Set up other agents that we can delegate to
-sub_agents=[
-    deposit_agent,
-    loan_agent,
-]
-
-# 10. Creates the agent with sub-agents and all the required tools
+# 9. Creates the agent with sub-agents and all the required tools
 root_agent = Agent(
     name="manager_agent",
-    description="Agent that handles loan applications.",
+    description="Agent that manages National Bank general information.",
     instruction=instruction,
-    sub_agents=sub_agents,
+    sub_agents=[
+        deposit_agent,
+        loan_agent,
+    ],
     tools=[
         get_accounts_tool,
         get_balance_tool,
@@ -75,7 +74,7 @@ root_agent = Agent(
     model=model,
 )
 
-# 11. Defines the ADK Runner for the root_agent
+# 10. Defines the ADK Runner for the root_agent
 runner = Runner(
     agent=root_agent,
     session_service=session_service,

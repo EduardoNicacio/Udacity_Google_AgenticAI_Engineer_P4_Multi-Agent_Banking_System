@@ -2,11 +2,11 @@
 
 ## Multi-Agent Banking
 
-You are a Senior Developer at a small financial institution. The senior partners are interested in AI, but a little nervous about having a single agent with access to all a customer’s information. They want you to build a rapid prototype to demonstrate what agents can do and the feasibility of the idea without using actual customer data.
+You are a Senior Developer at a small financial institution. The senior partners are interested in AI, but a little nervous about having a single agent with access to all a customer's information. They want you to build a rapid prototype to demonstrate what agents can do and the feasibility of the idea without using actual customer data.
 
 ### The Challenge
 
-You will need to implement agents that work together to provide information for customers, but can also work independently from each other for some tasks. Specifically, you’ll need to provide access to three sets of information
+You will need to implement agents that work together to provide information for customers, but can also work independently from each other for some tasks. Specifically, you'll need to provide access to three sets of information
 
 - General banking information
 - Deposit accounts they have (such as checking or savings accounts)
@@ -18,11 +18,11 @@ Some of these components need information from the others, but should not have a
 
 ### Assumptions
 
-- You won’t need to manage multiple accounts - you can assume authentication has been handled for a single account.
+- You won't need to manage multiple accounts - you can assume authentication has been handled for a single account.
 - These are not real procedures that the bank follows - your management just wants you to do them to prove advanced concepts are feasible before going ahead with real business logic.
 The Goal
 
-Build three independent agents that can manage this information and provide it to the customer. There may be sub-agents that handle specific tasks. Prove the concept is feasible and safe so the bank’s board will approve a full-scale project.
+Build three independent agents that can manage this information and provide it to the customer. There may be sub-agents that handle specific tasks. Prove the concept is feasible and safe so the bank's board will approve a full-scale project.
 
 ## Project Summary
 

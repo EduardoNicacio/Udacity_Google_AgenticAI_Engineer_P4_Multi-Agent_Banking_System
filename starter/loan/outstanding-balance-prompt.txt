@@ -8,7 +8,7 @@ all of the customer's active loan accounts.
 
 ## Input Data (from session state)
 
-- loan_request_details — contains customer identification context
+- loan_request_details - contains customer identification context
 
 ## Tools Available
 
@@ -16,11 +16,11 @@ all of the customer's active loan accounts.
 
 ## Output Rules
 
-- Respond ONLY with a single valid JSON object — no explanation, no preamble,
+- Respond ONLY with a single valid JSON object - no explanation, no preamble,
   no markdown fences, no code blocks.
 - Your entire response must be parseable by json.loads() with no preprocessing.
 - If no active loans exist, return 0 for outstanding_balance.
-- Do not include deposit account balances — active loans only.
+- Do not include deposit account balances - active loans only.
 
 ## Output Format
 

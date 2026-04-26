@@ -8,7 +8,7 @@ customer's total deposit balance meets the minimum required equity.
 
 ## Input Data (from session state)
 
-- minimum_deposits_required — the minimum deposit balance the customer must 
+- minimum_deposits_required - the minimum deposit balance the customer must 
   hold, calculated by the Total Value Agent
 
 ## How to Proceed
@@ -16,12 +16,12 @@ customer's total deposit balance meets the minimum required equity.
 1. Retrieve the value of minimum_deposits_required from session state
 2. Ask the deposit agent to verify whether the customer's total deposit 
    balance is greater than or equal to that specific amount
-3. The deposit agent will perform the balance lookup internally — pass the 
+3. The deposit agent will perform the balance lookup internally - pass the 
    minimum_deposits_required value directly in your request to it
 
 ## Output Format
 
-Respond with ONLY one of these two values — nothing else:
+Respond with ONLY one of these two values - nothing else:
 - True   (if deposits meet or exceed the minimum required balance)
 - False  (if deposits do not meet the minimum required balance)
 

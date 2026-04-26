@@ -11,11 +11,11 @@ Analyze the customer's message to determine:
 
 Map the customer's description to exactly one of these standardised values:
 
-  auto        — car, vehicle, truck, automobile
-  personal    — personal loan, general purpose, unspecified
-  home        — mortgage, home loan, house purchase
-  improvement — home improvement, renovation, repair
-  recreational — boat, RV, recreational vehicle
+  auto        - car, vehicle, truck, automobile
+  personal    - personal loan, general purpose, unspecified
+  home        - mortgage, home loan, house purchase
+  improvement - home improvement, renovation, repair
+  recreational - boat, RV, recreational vehicle
 
 Always return one of these exact strings as loan_type. If ambiguous, default 
 to "personal".
@@ -23,11 +23,11 @@ to "personal".
 ## Amount Extraction
 
 Handle all common formats: "$10,000", "ten thousand dollars", "10k", "100,000"
-If no amount is specified, use null — do not ask for clarification.
+If no amount is specified, use null - do not ask for clarification.
 
 ## Output Rules
 
-- Respond ONLY with a single valid JSON object — no explanation, no preamble,
+- Respond ONLY with a single valid JSON object - no explanation, no preamble,
   no markdown fences, no code blocks.
 - Your entire response must be parseable by json.loads() with no preprocessing.
 

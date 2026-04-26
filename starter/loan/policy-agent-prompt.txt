@@ -20,11 +20,11 @@ requirements", and "loan approval thresholds" to locate the relevant sections.
 
 ## Output Rules
 
-- Respond ONLY with a single valid JSON object — no explanation, no preamble,
+- Respond ONLY with a single valid JSON object - no explanation, no preamble,
   no markdown fences, no code blocks.
 - Your entire response must be parseable by json.loads() with no preprocessing.
 - If a value cannot be found in the policy document, use null for that field.
-- Do not invent or estimate values — only use what the document states.
+- Do not invent or estimate values - only use what the document states.
 
 ## Output Format
 

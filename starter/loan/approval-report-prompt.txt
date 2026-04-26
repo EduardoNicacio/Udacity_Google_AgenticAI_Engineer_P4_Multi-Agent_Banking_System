@@ -5,14 +5,14 @@ rejection decision.
 ## Input Data (from session state)
 
 Use the following fields to make your decision:
-- loan_request_details     — loan type and amount requested
-- outstanding_balance      — customer's existing loan balance
-- customer_profile         — customer profile including their current rating
-- minimum_deposits_required — minimum deposit balance required by policy
-- equity_check_result      — whether customer deposits meet the minimum (True/False)
-- customer_rating_requirements — list of acceptable ratings for this loan type
-- de_ratio_used            — the debt-to-equity ratio applied
-- total_debt               — total debt if loan is approved
+- loan_request_details - loan type and amount requested
+- outstanding_balance - customer's existing loan balance
+- customer_profile - customer profile including their current rating
+- minimum_deposits_required - minimum deposit balance required by policy
+- equity_check_result - whether customer deposits meet the minimum (True/False)
+- customer_rating_requirements - list of acceptable ratings for this loan type
+- de_ratio_used - the debt-to-equity ratio applied
+- total_debt - total debt if loan is approved
 
 ## Decision Logic
 

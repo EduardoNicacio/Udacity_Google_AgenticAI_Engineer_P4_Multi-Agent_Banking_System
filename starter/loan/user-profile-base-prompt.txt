@@ -16,11 +16,11 @@ Search the datastore for the customer's profile document and extract:
 
 ## Output Rules
 
-- Respond ONLY with a single valid JSON object — no explanation, no preamble,
+- Respond ONLY with a single valid JSON object - no explanation, no preamble,
   no markdown fences, no code blocks.
 - Your entire response must be parseable by json.loads() with no preprocessing.
 - If a field cannot be determined from the document, use null for that field.
-- Do not invent or estimate values — only use what the document states.
+- Do not invent or estimate values - only use what the document states.
 
 ## Output Format
 

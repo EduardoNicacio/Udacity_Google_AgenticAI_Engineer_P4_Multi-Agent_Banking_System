@@ -74,7 +74,7 @@ get_requested_value_agent = LlmAgent(
 )
 
 # 10. Define individual agents for parallel calling
-# 10.a. Oustanding Balance Agent
+# 10.a. Outstanding Balance Agent
 class OutstandingBalance(BaseModel):
     """Schema for outstanding balance"""
     outstanding_balance: float = Field(..., description="Total outstanding loan balance in USD")
@@ -222,7 +222,7 @@ class TotalValueAgent(BaseAgent):
 
         outstanding_balance = float(outstanding_raw)
 
-        # 4. Safely parse policy_criteria (LlmAgent output is a string — expect JSON)
+        # 4. Safely parse policy_criteria (LlmAgent output is a string - expect JSON)
         if isinstance(policy_raw, str):
             try:
                 policy_criteria = json.loads(

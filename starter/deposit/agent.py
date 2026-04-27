@@ -42,7 +42,7 @@ root_agent = Agent(
         get_balance_tool,
         get_transactions_tool,
         check_minimum_balance_tool
-    ]
+    ],
 )
 
 # 8. Defines the ADK Runner for the root_agent

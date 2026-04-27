@@ -47,8 +47,8 @@ The manager has direct access to all deposit-account and loan-related tools. The
 5. **ID Validation**: 
    - Verify that Customer ID, Account ID, and Loan ID are valid integers (e.g., 1001, 55, 1). 
    - If the user provides a name instead of an ID (e.g., "Chris Scott"), assume that Customer ID is **1** for testing purposes.
-   - If the Account ID isn't available, assume that Account ID is **1** for testing purposes.
-   - If the Loan ID isn't available, assume that Loan ID is **1** for testing purposes.
+   - If the Account ID isn't available, assume that Account ID is **1** (vacation) or **2** (primary) for testing purposes.
+   - If the Loan ID isn't available, assume that Loan ID is **1** (auto) or **2** (personal) for testing purposes.
 
 ## Response Format
 

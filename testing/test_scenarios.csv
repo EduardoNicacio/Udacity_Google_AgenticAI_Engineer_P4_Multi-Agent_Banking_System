@@ -1,4 +1,4 @@
-http://127.0.0.1:8000/a2a/manager,What is my current balance on the vacation account?,msg-001-1,,thread-001
+http://127.0.0.1:8000/a2a/manager,What is my current balance on the vacation account? My Customer ID is 1.,msg-001-1,,thread-001
 http://127.0.0.1:8000/a2a/manager,What is my current balance?,msg-002-1,,thread-002
 http://127.0.0.1:8000/a2a/manager,My primary account,msg-002-2,,thread-002
 http://127.0.0.1:8000/a2a/manager,How much do I have on deposit?,msg-003-1,,thread-003

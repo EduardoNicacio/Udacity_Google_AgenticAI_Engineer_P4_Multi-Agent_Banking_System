@@ -55,6 +55,35 @@ requirements", and "loan approval thresholds" to locate the relevant sections.
   "source_uri": "string"
 }
 
+If a response like "No results found" exists, you still need to provide a valid JSON output for the next agent, as follows:
+
+{
+  "debt_to_equity_ratios": {
+    "auto_loans_under_10k": 0.0,
+    "auto_loans_10k_plus": 0.0,
+    "recreational_vehicles": 0.0,
+    "home_improvement_under_20k": 0.0,
+    "home_improvement_20k_plus": 0.0,
+    "personal_loans_under_100": 0.0,
+    "personal_loans_100_to_500": 0.0,
+    "personal_loans_500_to_5000": 0.0,
+    "personal_loans_5000_plus": 0.0
+  },
+  "customer_rating_requirements": {
+    "auto_loans_under_10k": [],
+    "auto_loans_10k_plus": [],
+    "recreational_vehicles": [],
+    "home_improvement_under_20k": [],
+    "home_improvement_20k_plus": [],
+    "personal_loans_under_100": [],
+    "personal_loans_100_to_500": [],
+    "personal_loans_500_to_5000": [],
+    "personal_loans_5000_plus": []
+  },
+  "policy_document_loaded": false,
+  "source_uri": ""
+}
+
 ## Rating Scale Reference
 
 Ratings from lowest to highest: Poor < Fair < Good < Great < Excellent

@@ -9,7 +9,7 @@ Analyze the customer's message to determine:
 
 ## Loan Type Classification
 
-Map the customer's description to exactly one of these standardised values:
+Map the customer's description to exactly one of these standardized values:
 
   auto        - car, vehicle, truck, automobile
   personal    - personal loan, general purpose, unspecified

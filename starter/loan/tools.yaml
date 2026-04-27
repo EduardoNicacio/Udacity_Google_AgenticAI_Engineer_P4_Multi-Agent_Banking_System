@@ -15,7 +15,7 @@ tools:
       - name: customer_id
         type: integer
         description: The ID of the Customer.
-    statement: SELECT outstanding_balance FROM loans WHERE customer_id = ?
+    statement: SELECT id, customer_id, loan_type, outstanding_balance FROM loans WHERE customer_id = ?
   get_loan_details:
     kind: mysql-sql
     source: loan

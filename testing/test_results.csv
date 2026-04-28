@@ -1,0 +1,23 @@
+msg-001-1,"I can help you with that. To access your account information, I'll need your Customer ID. Could you please provide it?"
+msg-002-1,I can help you with your balance! Please provide your **customer ID** and the **account ID** for the account you'd like to check.
+msg-002-2,"I understand you're asking about your primary account. To help you with that, I first need your **customer ID**. Please provide it so I can look up your accounts."
+msg-003-1,I cannot provide the total balance of all your accounts due to security policies. I can help you check the balance of a specific account if you provide the account ID and your customer ID.
+msg-004-1,"I understand you're asking about your most recent payment. To help you, I need two pieces of information:
+
+1.  **Your Customer ID:** I cannot access any account details without this.
+2.  **Which account you consider your ""main account"":** Once I have your customer ID and can list your accounts, you'll need to specify which one you'd like me to check for transactions.
+
+Please provide your customer ID so we can start."
+msg-005-1,"I can help you with that, but I need to know which account you used for the payment. Could you please provide the account ID?"
+msg-006-1,"I understand your request to add $1000 to your vacation account. However, I want to be absolutely clear that I cannot process transactions or modify your account balances. This functionality is beyond my capabilities. I can only provide information based on the tools available to me."
+msg-007-1,We regret to inform you that your loan application cannot be processed at this time.
+msg-007-2,We regret to inform you that your loan application cannot be processed at this time.
+msg-008-1,I regret to inform you that we are unable to process your loan application at this time. A loan officer will reach out to discuss your options.
+msg-008-2,I regret to inform you that we are unable to process your loan application at this time. A loan officer will reach out to discuss your options.
+msg-009-1,"I understand you're looking to buy a new house for approximately $500,000. To reiterate, based on your current deposit balance, we were unable to process a loan application for that amount. Your previous loan application for $500,000 was not approved due to insufficient funds."
+msg-010-1,"I'm sorry, your car loan for $10,000 has been denied. The reason is that your credit rating does not meet the minimum requirements for this type and amount of loan."
+msg-011-1,The next auto payment is due on 2025-10-01.
+msg-012-1,You owe a total of 22183.29 across your personal loans.
+msg-013-1,"Yes, you have two outstanding loans with balances of $12,024.04 and $10,159.25."
+msg-014-1,"I'm sorry, I don't have permission to combine that information without your explicit consent. To give you a summary of your financial situation, which would include both your deposit and loan information, I need your permission to aggregate this data. Would you like me to proceed with combining this information for a summary of your total net worth?"
+msg-015-1,"I'm sorry, I don't have permission to combine that information."

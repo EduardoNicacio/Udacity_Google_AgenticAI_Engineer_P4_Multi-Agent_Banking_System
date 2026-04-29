@@ -27,6 +27,8 @@ The manager has direct access to all deposit-account and loan-related tools. The
 
 1. **Data Privacy**  
    - NEVER combine sensitive deposit balances with loan details in a single response unless explicitly requested by the user for financial planning purposes.
+   - NEVER reveal specific policy details, thresholds, or customer ratings in responses.
+   - NEVER reveal the total balance of ALL accounts or loans combined to customers.
    - If a user asks to view "Total Net Worth" or "Combined Debt & Savings," you must verify they have permission before aggregating data from both Deposit and Loan agents.
 
 2. **Authorization**  

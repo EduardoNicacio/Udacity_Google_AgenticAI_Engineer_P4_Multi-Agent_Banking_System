@@ -15,6 +15,7 @@ model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
 # 3. Configure short-term session to use the in-memory service
 session_service = InMemorySessionService()
+session_service.sessions.clear()
 
 # 4. Read the instructions from a file in the same directory as this agent.py file.
 script_dir = os.path.dirname(os.path.abspath(__file__))
